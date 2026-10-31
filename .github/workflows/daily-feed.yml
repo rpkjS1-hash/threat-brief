@@ -1,0 +1,67 @@
+name: Daily threat feed
+
+on:
+  schedule:
+    # 22:37 UTC Sunday to Thursday = 06:37 Monday to Friday in Singapore
+    - cron: "37 22 * * 0-4"
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+  push:
+    branches: [main]
+    paths:                  # re-publish when you change these files
+      - "analysis.html"
+      - "scripts/**"
+      - ".github/workflows/daily-feed.yml"
+
+# Only one publish at a time. Never cancel one that is running.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write       # to save today's snapshot in the data/ folder
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Build the site from public data
+        env:
+          # Optional. Add a free NVD API key as a repository secret to make NVD faster.
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: python3 scripts/build_feed.py --out _site
+
+      - name: Save today's snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Feed snapshot $(date -u +%F)"
+            git push
+          fi
+
+      - name: Package the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write          # to publish to GitHub Pages
+      id-token: write       # to prove the publish comes from this workflow
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
