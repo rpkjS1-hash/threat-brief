@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="edition-date" content="2026-10-31">
+<meta name="description" content="Daily cyber threat brief for Saturday 31 Oct 2026: the PHP2Shell chain, exploited GitLab and Cisco flaws, Brotli and a fake Cursor extension, in plain English and technical detail.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Threat Brief 31 Oct">
+<meta property="og:description" content="Daily cyber threat brief for Saturday 31 Oct 2026: the PHP2Shell chain, exploited GitLab and Cisco flaws, Brotli and a fake Cursor extension, in plain English and technical detail.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236B0AEA' d='M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z'/%3E%3C/svg%3E">
+<title>Threat Brief 31 Oct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F5F5FA;
+  --surface:#FFFFFF;
+  --surface-2:#EEEEF7;
+  --fg:#1A1B2E;
+  --muted:#55576F;
+  --line:#DCDDEA;
+  --accent:#6B0AEA;
+  --accent-soft:#EFE7FD;
+  --good:#12765A;
+  --good-soft:#E0F3EB;
+  --bad:#BE2638;
+  --bad-soft:#FCE6E9;
+  --warn:#8F5200;
+  --warn-soft:#FFEFD3;
+  --code:#EEEEF7;
+  --hero-bg:#0B0C1B;
+  --hero-fg:#F1F1F9;
+  --hero-muted:#AEB0C9;
+  --hero-line:#2C2E4A;
+  --hero-accent:#B38CFF;
+  --shadow:0 1px 2px rgba(26,27,46,.06),0 6px 20px rgba(26,27,46,.05);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0C1B;
+    --surface:#14152A;
+    --surface-2:#1C1D36;
+    --fg:#E9EAF5;
+    --muted:#A3A5BE;
+    --line:#2B2D49;
+    --accent:#B38CFF;
+    --accent-soft:#2A1C52;
+    --good:#46D3A6;
+    --good-soft:#0F2F28;
+    --bad:#FF8A95;
+    --bad-soft:#3A1B24;
+    --warn:#F2B866;
+    --warn-soft:#352A12;
+    --code:#1C1D36;
+    --hero-bg:#05050F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0C1B;
+  --surface:#14152A;
+  --surface-2:#1C1D36;
+  --fg:#E9EAF5;
+  --muted:#A3A5BE;
+  --line:#2B2D49;
+  --accent:#B38CFF;
+  --accent-soft:#2A1C52;
+  --good:#46D3A6;
+  --good-soft:#0F2F28;
+  --bad:#FF8A95;
+  --bad-soft:#3A1B24;
+  --warn:#F2B866;
+  --warn-soft:#352A12;
+  --code:#1C1D36;
+  --hero-bg:#05050F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:var(--accent);text-underline-offset:2px}
+p{margin:0 0 .8em}
+code{font-family:var(--mono);font-size:.84em;background:var(--code);padding:1px 5px;border-radius:5px;overflow-wrap:anywhere}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-fg);border-bottom:1px solid var(--hero-line)}
+.hero .wrap{padding-block:28px 22px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-accent);margin:0 0 8px}
+h1{font-size:clamp(1.7rem,4.4vw,2.5rem);line-height:1.15;margin:0 0 10px;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.hero-meta{margin:2px 0;color:var(--hero-muted);font-size:.9rem}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.jump a{color:var(--hero-fg);text-decoration:none;border:1px solid var(--hero-line);padding:6px 12px;border-radius:999px;font-size:.84rem}
+.jump a:hover{border-color:var(--hero-accent);color:var(--hero-accent)}
+
+/* sections */
+main .wrap{padding-block:4px 48px}
+.sec{margin-top:36px;scroll-margin-top:12px}
+h2{font-size:1.35rem;line-height:1.25;margin:0 0 14px;font-weight:700;text-wrap:balance}
+.note{color:var(--muted);font-size:.9rem;max-width:70ch}
+
+/* badges */
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.b{display:inline-flex;align-items:center;font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.b-bad{background:var(--bad-soft);color:var(--bad)}
+.b-warn{background:var(--warn-soft);color:var(--warn)}
+.b-good{background:var(--good-soft);color:var(--good)}
+.b-accent{background:var(--accent-soft);color:var(--accent)}
+.b-mute{background:var(--surface-2);color:var(--muted)}
+
+/* bottom line */
+.bl{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+.bl ul{margin:0;padding-left:1.1em;display:grid;gap:10px;max-width:72ch}
+.s1line{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);max-width:72ch}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.stat b{display:block;font-family:var(--mono);font-size:1.9rem;line-height:1.1;color:var(--accent);font-weight:500}
+.stat span{display:block;font-size:.9rem;margin-top:6px}
+.stat small{display:block;color:var(--muted);font-size:.78rem;margin-top:4px}
+
+/* action lists */
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.act{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.act.today{border-top:4px solid var(--bad)}
+.act.week{border-top:4px solid var(--warn)}
+.act h3{margin:0 0 10px;font-size:1rem}
+.act ol{margin:0;padding-left:1.2em;display:grid;gap:8px}
+
+/* cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden}
+.card-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:18px 20px 14px;align-items:start}
+.rank{font-family:var(--mono);font-size:1.3rem;width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:500}
+.card h3{margin:0 0 4px;font-size:1.25rem;line-height:1.25;text-wrap:balance}
+.ids{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin:0;overflow-wrap:anywhere}
+.blk{padding:14px 20px;border-top:1px solid var(--line)}
+.blk h4,.s1 h4{margin:0 0 8px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.blk ul,.blk ol,.s1 ul{margin:0;padding-left:1.15em;display:grid;gap:7px;max-width:72ch}
+.blk p{max-width:72ch;margin:0}
+.blk.plain{background:var(--accent-soft)}
+.blk.plain h4{color:var(--accent)}
+.s1{padding:16px 20px 18px;border-top:1px solid var(--line);background:var(--surface-2)}
+.s1-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.s1-top h4{margin:0}
+.s1-grid{display:grid;gap:14px}
+.s1-grid h5{margin:0 0 4px;font-size:.88rem}
+.s1-grid p{margin:0;max-width:72ch}
+.src{padding:10px 20px 14px;border-top:1px solid var(--line);font-size:.86rem}
+.src summary{cursor:pointer;font-weight:600;color:var(--muted)}
+.src ul{margin:8px 0 0;padding-left:1.1em;display:grid;gap:4px}
+.src li{overflow-wrap:anywhere}
+
+/* table */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.id{font-family:var(--mono);font-size:.78rem;white-space:nowrap}
+
+/* mini cards and lists */
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.mini h3{margin:0 0 6px;font-size:1.05rem}
+.mini ul{margin:0 0 10px;padding-left:1.15em;display:grid;gap:6px;max-width:72ch}
+.mini p{max-width:72ch}
+.plainlist{margin:0;padding-left:1.15em;display:grid;gap:8px;max-width:72ch}
+.legend{display:grid;gap:8px;margin:0 0 14px;max-width:72ch}
+.legend div{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.end{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+.end p{max-width:72ch}
+@media (max-width:899px){
+  .tw{overflow:visible;border:0;background:none;border-radius:0}
+  table,thead,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+  tr{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 0;margin-bottom:12px}
+  td,tr:last-child td{border:0;padding:6px 14px;display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px}
+  td::before{content:attr(data-label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+  td.id{white-space:normal}
+}
+@media (max-width:480px){
+  .card-head{padding:16px 16px 12px}
+  .blk,.s1,.src{padding-left:16px;padding-right:16px}
+  .rank{width:34px;height:34px;font-size:1.1rem}
+}
+.sitenav{background:var(--hero-bg)}
+.sitenav .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;padding-block:10px;font-size:.84rem}
+.sitenav a{color:var(--hero-muted);text-decoration:none}
+.sitenav a:hover{color:var(--hero-accent)}
+.hero .wrap{padding-top:14px}
+</style>
+</head>
+<body>
+<nav class="sitenav" aria-label="Site"><div class="wrap"><a href="./">← Daily Threat Watch</a><a href="archive/">Archive</a></div></nav>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Daily Threat Brief · First edition</p>
+    <h1>Saturday 31 October 2026</h1>
+    <p class="hero-meta">Data as of 02:08 UTC · 13:08 AEDT · 10:08 SGT</p>
+    <p class="hero-meta">Window: 24–31 Oct (a full week, because this is the first edition)</p>
+    <nav class="jump" aria-label="Jump to a section">
+      <a href="#bottom-line">Bottom line</a>
+      <a href="#act">What to do</a>
+      <a href="#top">Top threats</a>
+      <a href="#hits">Quick hits</a>
+      <a href="#apj">APJ watch</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<section class="sec" id="bottom-line">
+  <h2>Bottom line</h2>
+  <div class="bl">
+    <ul>
+      <li><strong>PHP is the big one.</strong> Two PHP bugs let an attacker take over a web server with one crafted request. CISA says a Linux kernel bug then gives them root. All three are on CISA's KEV list (bugs known to be used in real attacks).</li>
+      <li><strong>GitLab and Cisco VPN firewalls are under attack too.</strong> Both CISA deadlines are tomorrow, 1 Nov.</li>
+      <li><strong>Two quieter risks need action this week.</strong> Brotli, a compression library inside Node.js, .NET and Python. And a fake Claude Code extension that sat in the Cursor marketplace on 29 Oct.</li>
+    </ul>
+    <p class="s1line"><strong>SentinelOne relevance:</strong> S1 has published coverage for one of the five items (PHP2Shell). For three more, the agent and AI SIEM can help you spot what an attacker does after getting in. For the Cisco flaw, S1 cannot help directly.</p>
+  </div>
+</section>
+
+<section class="sec" id="glance">
+  <h2>At a glance</h2>
+  <div class="stats">
+    <div class="stat"><b>8</b><span>New CISA KEV entries, 24–29 Oct</span><small>Catalog 2026.10.29 · 1,764 entries</small></div>
+    <div class="stat"><b>26</b><span>Critical CVEs (CVSS v3) published in NVD, 24–31 Oct</span><small>Counts only CVEs that have a v3 score</small></div>
+    <div class="stat"><b>3</b><span>CISA deadlines in the next 2 days</span><small>Kernel today · GitLab and Cisco 1 Nov</small></div>
+    <div class="stat"><b>4 of 5</b><span>Top items are on KEV</span><small>PHP2Shell chain, GitLab, Cisco, Brotli</small></div>
+  </div>
+  <p class="note" style="margin-top:12px">KEV deadlines bind US federal agencies. Everyone else can use them as a priority signal.</p>
+</section>
+
+<section class="sec" id="act">
+  <h2>What to do</h2>
+  <div class="acts">
+    <div class="act today">
+      <h3><span class="b b-bad">Act today</span></h3>
+      <ol>
+        <li><strong>PHP servers:</strong> patch PHP and the Linux kernel on the same hosts. Restart web workers. The kernel's CISA deadline is today.</li>
+        <li><strong>Self-managed GitLab:</strong> upgrade to the 21 Oct patch release or later. It fixes both critical bugs.</li>
+        <li><strong>Cisco ASA and FTD:</strong> check for SSL VPN with secondary authentication. Upgrade. Or switch off secondary authentication as a stop-gap.</li>
+      </ol>
+    </div>
+    <div class="act week">
+      <h3><span class="b b-warn">This week</span></h3>
+      <ol>
+        <li><strong>Brotli:</strong> update Node.js and other runtimes. Rebuild containers.</li>
+        <li><strong>Cursor users:</strong> run Cursor's check and clean-up scripts. Do it today if you have Cursor users.</li>
+        <li><strong>Web platforms:</strong> Drupal Commerce (exploited), Adobe Commerce / Magento (on KEV) and WordPress 7.1.4.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="top">
+  <h2>Top threats</h2>
+  <p class="note">Ranked by risk, not by how well S1 fits. Every card ends with an honest S1 section. The coverage labels are explained under Coverage notes.</p>
+
+<article class="card" id="item-1">
+  <div class="card-head">
+    <div class="rank">1</div>
+    <div>
+      <div class="badges">
+        <span class="b b-bad">Act today</span>
+        <span class="b b-bad">On KEV</span>
+        <span class="b b-mute">CVSS 9.2 (v4)</span>
+        <span class="b b-mute">EPSS 99.999%</span>
+        <span class="b b-good">S1 published coverage</span>
+      </div>
+      <h3>PHP2Shell: two PHP bugs and a Linux root bug</h3>
+      <p class="ids">CVE-2026-109618 · CVE-2026-109619 · CVE-2026-46300</p>
+    </div>
+  </div>
+  <div class="blk plain">
+    <h4>In plain English</h4>
+    <p>PHP runs a huge share of the web. Two bugs in PHP let an attacker take over a web server. One crafted request is enough. No password is needed. A third bug, in the Linux kernel, turns that foothold into full "root" control, says CISA.</p>
+  </div>
+  <div class="blk">
+    <h4>What is happening now</h4>
+    <ul>
+      <li>watchTowr saw attack attempts on 21 Oct, the day the fixes shipped.</li>
+      <li>CISA added both PHP bugs to KEV on 26 Oct. The deadline was 29 Oct. It added the kernel bug on 28 Oct. That deadline is today.</li>
+      <li>CISA says the kernel bug "can be chained with" both PHP bugs "to implant PHP webshells and run commands as root".</li>
+      <li>Some firms took sites offline as a precaution, including BambooHR and Dutch government sites (press reports).</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>Technical detail</h4>
+    <ul>
+      <li>Both PHP bugs score CVSS v4.0 9.2 (set by the PHP project). Their exploit-likelihood score (EPSS) is 99.999%. Fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35.</li>
+      <li>Affected versions go back to 5.4. PHP 8.1 and older get no official release. Source backports exist for 7.4, 8.0 and 8.1. Distros may backport under the old version number, so check your vendor's notice. PHP 8.2 reaches end of life on 31 Dec 2026.</li>
+      <li>Highest risk: Apache <code>mod_php</code>. One unauthenticated request is handled before your app code runs. PHP-FPM, php-cgi, FrankenPHP and LiteSpeed are also at risk.</li>
+      <li>A separate path leaks worker memory, such as passwords, tokens and API keys, without running any code.</li>
+      <li>Kernel bug CVE-2026-46300 scores CVSS 3.1 7.8 (local access, low privileges). "Local" means the attacker must already run code on the box. A PHP webshell gives them exactly that. EPSS is 16.1%.</li>
+      <li>Fixed kernels: 5.10.257, 5.15.208, 6.1.174, 6.6.141, 6.12.91, 6.18.33, 7.0.10 and 7.1. Red Hat has fixes for RHEL 8, 9 and 10. It says RHEL 6 and 7 are not affected.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>What to do</h4>
+    <ol>
+      <li>List every host that runs PHP: web servers, containers, CMS and legacy apps.</li>
+      <li>Patch PHP to a fixed version. Updating WordPress or Laravel does not update PHP itself. Restart Apache, PHP-FPM or workers afterwards.</li>
+      <li>Patch the Linux kernel on the same hosts. This needs a reboot.</li>
+      <li>Cannot patch today? The PHP project lists partial settings. For CVE-2026-109618: <code>memory_limit=-1</code> and a low <code>post_max_size</code>. For CVE-2026-109619: <code>session.upload_progress.enabled=0</code>, and on PHP 8.5 also <code>fatal_error_backtraces=0</code>. These reduce risk. They do not fix it. A WAF helps, but Cloudflare reports attackers changing payloads to dodge WAF rules.</li>
+      <li>Hunt for signs of attack: new <code>.php</code> files in web roots, web server processes starting shells or <code>curl</code> and <code>wget</code>, and unexplained worker restarts or spikes of HTTP 500 errors.</li>
+    </ol>
+  </div>
+  <section class="s1">
+    <div class="s1-top"><h4>How SentinelOne can help</h4><span class="b b-good">S1 published coverage</span></div>
+    <div class="s1-grid">
+      <div>
+        <h5>Where it helps</h5>
+        <ul>
+          <li>S1 published a blog, "Stopping PHP2SHELL" (21 Oct, updated 26 Oct).</li>
+          <li>The agent looks for what an attacker does after getting in: a web worker starting shells, tools dropped in <code>/tmp</code>, new <code>.php</code> files in web roots, reverse-shell patterns.</li>
+          <li>In Protect mode, the agent can stop the process tree and quarantine dropped files.</li>
+          <li>AI SIEM detection content and Purple AI hunts help you search for the same behaviour after the fact.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>What S1 does not do here</h5>
+        <ul>
+          <li>It does not patch PHP or the kernel. Patching is the main fix.</li>
+          <li>The memory-leak path starts no process, so host telemetry will not see it. You need web server, WAF or CDN logs in AI SIEM.</li>
+          <li>The blog says "current as of October 21". It predates the CISA listing. It does not mention the kernel root chain.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Depends on</h5>
+        <p>The agent installed, healthy and in Protect mode on every PHP server. Web logs flowing into AI SIEM for the memory-leak path.</p>
+      </div>
+    </div>
+  </section>
+  <details class="src">
+    <summary>Sources</summary>
+    <ul>
+      <li>CISA Known Exploited Vulnerabilities catalog, via GitHub mirror: <a href="https://github.com/cisagov/kev-data">github.com/cisagov/kev-data</a> (catalog 2026.10.29)</li>
+      <li>PHP project advisory: <a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp">GHSA-6wmf-4rv5-p3rp</a></li>
+      <li>watchTowr: <a href="https://watchtowr.com/intelligence/php-remote-code-execution-php2shell/">PHP2Shell advisory</a></li>
+      <li>The Hacker News: <a href="https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html">PHP2Shell</a> · <a href="https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html">emergency patches</a></li>
+      <li>SentinelOne: <a href="https://www.sentinelone.com/blog/stopping-php2shell-how-sentinelone-protects-customers-from-this-attack-technique/">Stopping PHP2SHELL</a></li>
+      <li>Cloudflare: <a href="https://blog.cloudflare.com/php-vulnerabilities-waf-protection">PHP vulnerabilities and WAF protection</a></li>
+      <li>NVD: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300">CVE-2026-46300</a> · Red Hat: <a href="https://access.redhat.com/security/cve/CVE-2026-46300">CVE-2026-46300</a></li>
+      <li>FIRST EPSS, values from 30 Oct: <a href="https://www.first.org/epss/">first.org/epss</a></li>
+    </ul>
+  </details>
+</article>
+
+<article class="card" id="item-2">
+  <div class="card-head">
+    <div class="rank">2</div>
+    <div>
+      <div class="badges">
+        <span class="b b-bad">Act today</span>
+        <span class="b b-bad">On KEV · due 1 Nov</span>
+        <span class="b b-mute">CVSS 10.0</span>
+        <span class="b b-mute">EPSS 26.6%</span>
+        <span class="b b-accent">S1 capability-based</span>
+      </div>
+      <h3>GitLab: a CI regular expression leads to remote code execution</h3>
+      <p class="ids">CVE-2026-97229 · also CVE-2026-110264</p>
+    </div>
+  </div>
+  <div class="blk plain">
+    <h4>In plain English</h4>
+    <p>GitLab holds your source code, build pipelines and secrets. This bug lets an attacker run commands on the GitLab server itself. It starts with a text-matching pattern (a "regular expression") that GitLab builds from attacker-supplied input. A crafted pattern corrupts memory. The attacker then takes over.</p>
+  </div>
+  <div class="blk">
+    <h4>What is happening now</h4>
+    <ul>
+      <li>CISA added it to KEV on 29 Oct, 17 days after the fix. The deadline is 1 Nov.</li>
+      <li>GitLab scores it 10.0 with no privileges needed. GitLab.com and GitLab Dedicated are already patched. Self-managed installs must upgrade.</li>
+      <li>Public exploit code exists. A Metasploit module sits in an open pull request. It first needs an account that can push to a public project. Then one request, with no login, triggers the bug and runs a command as the GitLab <code>git</code> account.</li>
+      <li>A second critical bug, CVE-2026-110264 (CVSS 10.0), was fixed on 21 Oct. It is in the same regex engine. It was not on KEV in catalog 2026.10.29.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>Technical detail</h4>
+    <ul>
+      <li>CVE-2026-97229 is an integer overflow (CWE-190). It happens when GitLab compiles a regular expression taken from a CI/CD configuration. GitLab's score: CVSS 3.1 10.0 (<code>AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code>). EPSS is 26.6%.</li>
+      <li>Affected: 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 (CE and EE).</li>
+      <li>The root cause is a bug in Ruby's regex engine (Onigmo). Ruby fixed it in 4.0.8, 3.4.12 and 3.3.13. Ruby advises 4.0.9, 3.4.12 or 3.3.13 or later.</li>
+      <li>Other software may be affected. Any app that builds a regex from attacker-controlled text can be: <code>Regexp.new</code>, <code>Regexp.union</code>, <code>Regexp.compile</code> or <code>/#{input}/</code>. <code>Regexp.timeout</code> does not protect. Ruby requested no CVEs of its own, so scanners may show only GitLab's IDs.</li>
+      <li>CVE-2026-110264 affects every GitLab version from 7.0 up to the 21 Oct releases. GitLab says no login is needed. Fixed in 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 and 18.11.13.</li>
+      <li>GitLab published six detections for self-managed instances. Examples: regex-engine worker crashes and bursts of CI lint errors.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>What to do</h4>
+    <ol>
+      <li>Find every self-managed GitLab, including old and forgotten ones. The version shows on the <code>/help</code> page.</li>
+      <li>Upgrade to the 21 Oct patch release or later: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 or 18.11.13. This fixes both bugs. Plan for downtime on single-node installs, because GitLab says the patch includes database migrations.</li>
+      <li>If you run your own Ruby (source installs), update Ruby too.</li>
+      <li>Stop-gap until you patch (general hardening, not a GitLab fix): limit network access to GitLab and turn off open sign-up.</li>
+      <li>Hunt: use GitLab's published detections. Look for shells or unexpected child processes under the <code>git</code> account.</li>
+    </ol>
+  </div>
+  <section class="s1">
+    <div class="s1-top"><h4>How SentinelOne can help</h4><span class="b b-accent">Capability-based (inference)</span></div>
+    <div class="s1-grid">
+      <div>
+        <h5>Where it helps</h5>
+        <ul>
+          <li>I found no S1 guidance for either GitLab CVE. What follows is what the product does in general.</li>
+          <li>The agent sees process activity on a Linux GitLab host. A GitLab worker that suddenly starts a shell, pulls down tools or opens a reverse shell is the kind of behaviour it is built to flag. In Protect mode it can act on a detection.</li>
+          <li>If GitLab logs go into AI SIEM, you can write alerts for the patterns GitLab describes, such as worker crashes and bursts of CI lint errors.</li>
+          <li>Purple AI can help you hunt for the <code>git</code> account starting shells.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>What S1 does not do here</h5>
+        <ul>
+          <li>It does not patch GitLab or Ruby.</li>
+          <li>It does not stop the memory corruption itself. It can only see what happens after.</li>
+          <li>S1's public vulnerability database page for CVE-2026-97229 was out of date when checked. It still said "not known exploited". It is not a statement of coverage.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Depends on</h5>
+        <p>The agent on the GitLab server, in Protect mode. GitLab logs in AI SIEM (optional).</p>
+      </div>
+    </div>
+  </section>
+  <details class="src">
+    <summary>Sources</summary>
+    <ul>
+      <li>GitLab: <a href="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/">19.4.2 patch release (12 Oct)</a> · <a href="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/">19.5.1 patch release (21 Oct)</a></li>
+      <li>Ruby: <a href="https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/">Regexp compilation fixes related to GitLab's CVEs</a> (23 Oct)</li>
+      <li>Metasploit: <a href="https://github.com/rapid7/metasploit-framework/pull/22017">pull request #22017</a> (open on 31 Oct)</li>
+      <li>The Hacker News: <a href="https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html">report on the KEV listing</a></li>
+      <li>CISA KEV via <a href="https://github.com/cisagov/kev-data">github.com/cisagov/kev-data</a> · FIRST EPSS, 30 Oct: <a href="https://www.first.org/epss/">first.org/epss</a></li>
+    </ul>
+  </details>
+</article>
+
+<article class="card" id="item-3">
+  <div class="card-head">
+    <div class="rank">3</div>
+    <div>
+      <div class="badges">
+        <span class="b b-bad">Act today</span>
+        <span class="b b-bad">On KEV · due 1 Nov</span>
+        <span class="b b-mute">CVSS 8.6</span>
+        <span class="b b-mute">EPSS 0.9%</span>
+        <span class="b b-mute">S1 limited or no direct help</span>
+      </div>
+      <h3>Cisco ASA and FTD: one crafted VPN request reboots the firewall</h3>
+      <p class="ids">CVE-2026-76418 · Cisco bug CSCwx26625</p>
+    </div>
+  </div>
+  <div class="blk plain">
+    <h4>In plain English</h4>
+    <p>Many firms use a Cisco firewall to give staff VPN access. This bug lets anyone on the internet send one crafted request to the VPN service. The firewall then reloads. Staff lose VPN while it restarts. Cisco says attackers are already using it.</p>
+  </div>
+  <div class="blk">
+    <h4>What is happening now</h4>
+    <ul>
+      <li>Cisco's advisory (28 Oct) says its PSIRT "became aware of active exploitation" in October 2026.</li>
+      <li>CISA added it to KEV on 29 Oct. The deadline is 1 Nov.</li>
+      <li>The EPSS score is only 0.9%. Ignore it here. Cisco and CISA both confirm real attacks.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>Technical detail</h4>
+    <ul>
+      <li>The bug is a logic error in the Remote Access SSL VPN service. It appears when secondary authentication is set on a tunnel group (CWE-690). A crafted request makes the device reload. That is a denial of service. CVSS 3.1 8.6 (<code>AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H</code>).</li>
+      <li>No VPN login is needed to reach the bad code path.</li>
+      <li>You are exposed only if all three are true: you run a vulnerable release; SSL VPN is reachable (<code>webvpn</code> with <code>enable &lt;interface&gt;</code>); and secondary authentication is set on a tunnel group.</li>
+      <li>Check <code>secondary-authentication-server-group</code> in every tunnel group. Include <code>DefaultWEBVPNGroup</code>, even if <code>tunnel-group-list</code> is off.</li>
+      <li>Not affected: Cisco's cloud-delivered Firewall (CDFW), cdFMC, Secure Access and Secure FMC.</li>
+      <li>First fixed ASA releases: 9.16.4.104 (9.16 and earlier), 9.18.4.96, 9.20.4.50, 9.22.3.200, 9.23.1.48, and 9.24.1.27 or 9.24.10.1. First fixed FTD releases: 7.0.11 (7.0 and earlier), 7.2.13, 7.4.9, 7.6.7, 7.7.14, 10.0.3 and 10.1.1.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>What to do</h4>
+    <ol>
+      <li>Check all three conditions on every ASA and FTD you run. Include branch offices and devices managed by partners.</li>
+      <li>If you are exposed, upgrade to the first fixed release for your train.</li>
+      <li>Cisco lists no workaround. The stop-gap is to switch off secondary authentication on the affected tunnel groups. Cisco's advisory gives the exact commands. This removes a login step, so it lowers VPN security. Use it only until you patch.</li>
+      <li>Check device logs for unexplained reloads.</li>
+    </ol>
+  </div>
+  <section class="s1">
+    <div class="s1-top"><h4>How SentinelOne can help</h4><span class="b b-mute">Limited or no direct help</span></div>
+    <div class="s1-grid">
+      <div>
+        <h5>Where it helps</h5>
+        <ul>
+          <li>S1 has no product that runs on or protects a Cisco ASA or FTD appliance.</li>
+          <li>Indirect help only: if you send firewall logs into AI SIEM, you can write alerts for unexplained reloads. That depends on the log source being ingested.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>What S1 does not do here</h5>
+        <ul>
+          <li>It cannot patch, protect or monitor the appliance itself. The agent does not run on it.</li>
+          <li>It cannot stop the crash. The fix is Cisco's.</li>
+          <li>I found no S1 material on this CVE.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Depends on</h5>
+        <p>Firewall logs reaching AI SIEM (optional).</p>
+      </div>
+    </div>
+  </section>
+  <details class="src">
+    <summary>Sources</summary>
+    <ul>
+      <li>Cisco: <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75">cisco-sa-asaftd-tunnel-dos-s6mgkb75</a> (28 Oct)</li>
+      <li>CISA KEV via <a href="https://github.com/cisagov/kev-data">github.com/cisagov/kev-data</a> · FIRST EPSS, 30 Oct: <a href="https://www.first.org/epss/">first.org/epss</a></li>
+    </ul>
+  </details>
+</article>
+
+<article class="card" id="item-4">
+  <div class="card-head">
+    <div class="rank">4</div>
+    <div>
+      <div class="badges">
+        <span class="b b-warn">This week</span>
+        <span class="b b-bad">On KEV · due 10 Nov</span>
+        <span class="b b-mute">CVSS 9.2 (v4)</span>
+        <span class="b b-mute">EPSS 82.6%</span>
+        <span class="b b-accent">S1 capability-based</span>
+      </div>
+      <h3>Brotli: a compression library bug that can run code</h3>
+      <p class="ids">CVE-2026-111497</p>
+    </div>
+  </div>
+  <div class="blk plain">
+    <h4>In plain English</h4>
+    <p>Brotli shrinks web content. Many programs use it to unpack data they receive. A bug in the unpacking code lets a crafted file overwrite memory. In the worst case, the attacker runs code. You are at risk only if your app unpacks Brotli data that an attacker can send.</p>
+  </div>
+  <div class="blk">
+    <h4>What is happening now</h4>
+    <ul>
+      <li>CISA added it to KEV on 27 Oct. The deadline is 10 Nov.</li>
+      <li>Imperva showed code execution on an unmodified Node.js 24.22.0 (Linux ARM64). It did not release the exploit.</li>
+      <li>The Hacker News said on 24 Oct that no attacks in the wild had been reported. An earlier CISA assessment (23 Oct) also recorded none. CISA then listed it on 27 Oct. The listing is the later, stronger signal.</li>
+      <li>EPSS is 82.6%. That is high.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>Technical detail</h4>
+    <ul>
+      <li>Cause: an unchecked return value in the decoder (CWE-252). It leads to an out-of-bounds memory write (CWE-787). A crafted stream can corrupt memory, leak memory, crash the app, and maybe run code.</li>
+      <li>CVSS v4 9.2 (Google, the CVE assigner). CVSS v3 9.8 (via Shodan CVEDB). Others score it lower: Red Hat and Microsoft use 8.1 (per The Hacker News). Node.js rates it high.</li>
+      <li>Affected: Brotli 1.0.3 to 1.2.0. Fixed in 1.0.10, 1.1.1 and 1.2.1.</li>
+      <li>Reported as affected: Node.js, Bun, .NET, Python (<code>Brotli</code> and <code>brotlicffi</code>), Envoy, Istio, ClickHouse, Apache Arrow, FFmpeg and libjxl, and cdxgen.</li>
+      <li>Fixed runtimes: Node.js 22.23.4, 24.22.1 and 26.12.1. Bun 1.4.4. .NET 8.0.33, 9.0.22 and 10.0.14 (Microsoft shipped out of band on 25 Oct). Python Brotli 1.2.1 and brotlicffi 1.2.1.0.</li>
+      <li>You are exposed only if your app decodes Brotli data an attacker controls. Examples: <code>fetch()</code> of a response with <code>Content-Encoding: br</code>, or Express and body-parser handling <code>br</code> request bodies.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>What to do</h4>
+    <ol>
+      <li>List the apps that decode Brotli: Node.js, Bun, .NET and Python services, proxies, and anything that bundles its own copy.</li>
+      <li>Update the runtime or library to a fixed version. Rebuild and restart containers. Updating a base image alone may not reach bundled copies.</li>
+      <li>Cannot update yet? Reject <code>Content-Encoding: br</code> at the edge. Turn off automatic Brotli decoding. Remove the Python Brotli packages if you do not use them.</li>
+      <li>Check your software inventory or scanner for Brotli, Node.js and .NET versions.</li>
+    </ol>
+  </div>
+  <section class="s1">
+    <div class="s1-top"><h4>How SentinelOne can help</h4><span class="b b-accent">Capability-based (inference)</span></div>
+    <div class="s1-grid">
+      <div>
+        <h5>Where it helps</h5>
+        <ul>
+          <li>I found no S1 guidance on this CVE. What follows is what the product does in general.</li>
+          <li>If an attacker gets code running inside a Node.js or .NET service, the agent can see odd child processes and outbound connections on servers it protects.</li>
+          <li>If you use Vulnerability Management, it can list vulnerable applications the agent sees installed, such as Node.js and .NET runtimes.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>What S1 does not do here</h5>
+        <ul>
+          <li>It cannot see inside a library. It does not block the memory bug.</li>
+          <li>It may miss Brotli copies bundled inside other apps, packages or containers.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Depends on</h5>
+        <p>The agent on the host. Vulnerability Management, if you want the inventory view.</p>
+      </div>
+    </div>
+  </section>
+  <details class="src">
+    <summary>Sources</summary>
+    <ul>
+      <li>Node.js: <a href="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases">October 2026 security releases</a> (21 Oct)</li>
+      <li>The Hacker News: <a href="https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html">report</a> (24 Oct, updated 26 Oct)</li>
+      <li>CISA KEV via <a href="https://github.com/cisagov/kev-data">github.com/cisagov/kev-data</a> · CVSS v3 via Shodan CVEDB · FIRST EPSS, 30 Oct: <a href="https://www.first.org/epss/">first.org/epss</a></li>
+    </ul>
+  </details>
+</article>
+
+<article class="card" id="item-5">
+  <div class="card-head">
+    <div class="rank">5</div>
+    <div>
+      <div class="badges">
+        <span class="b b-warn">This week</span>
+        <span class="b b-mute">No CVE · supply chain</span>
+        <span class="b b-accent">S1 capability-based</span>
+      </div>
+      <h3>Fake Claude Code extension in the Cursor marketplace</h3>
+      <p class="ids">No CVE · versions 2.1.312 and 2.1.313 of "Anthropic.claude-code"</p>
+    </div>
+  </div>
+  <div class="blk plain">
+    <h4>In plain English</h4>
+    <p>On 29 Oct, a fake Claude Code extension sat in Cursor's marketplace for about 11 hours. Anyone who installed it got a hidden remote-access key and a job that comes back after a restart. Cursor says Anthropic did not make it. Cursor reportedly says at most 5,000 users were affected. Removing the extension is not enough.</p>
+  </div>
+  <div class="blk">
+    <h4>What is happening now</h4>
+    <ul>
+      <li>Cursor posted a notice on 29 Oct and updated it on 30 Oct. Bad versions: 2.1.312 and 2.1.313, for Windows and macOS. Live from about 02:27 to 13:35 PT on 29 Oct.</li>
+      <li>Cursor removed the version, shut the marketplace, rotated keys and rebuilt. The attacker's server was taken offline.</li>
+      <li>The Hacker News (30 Oct) quotes Cursor's "at most 5,000 users" figure. It says it is not known on Open VSX or the Microsoft VS Code Marketplace. How the attackers got in is still unclear.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>Technical detail</h4>
+    <ul>
+      <li>A short loader (66 lines, per OpenSourceMalware) runs before the real extension code. It collects hostname, username, OS, architecture, home directory, environment variable names, working directories, git email and public IP.</li>
+      <li>It adds an attacker SSH key to <code>authorized_keys</code> (key comment <code>svc-telemetry</code>). It tries to turn on SSH and open a reverse SSH tunnel to the attacker. That needs admin rights and fails on most hosts. The key, the persistence and the beacon still happen.</li>
+      <li>Persistence: macOS LaunchAgent <code>com.apple.sysmond</code>. Windows scheduled task <code>SysMon</code> plus a Startup fallback. A Linux cron <code>@reboot</code> entry also appears in the code. The tunnel is retried about every 60 seconds.</li>
+      <li>Indicators (defanged): <code>134[.]209[.]82[.]225</code> (reverse SSH on port 22; beacon to port 8099 at <code>/beacon</code>). Key fingerprint <code>SHA256:0Z6R+DF64Do2nwQic8a7kkfDLNNk4IiK+2U2Rci4htk</code>. Files <code>~/.config/.smt</code>, <code>~/.config/.smtk</code> and <code>/tmp/.stk_&lt;10 hex&gt;</code>. Payload <code>extension.js</code> SHA-256 <code>ecb58cb29078d9646ad1dcdbe51526f2d9cfea06be5fb2ab183e8ecc3ab6bf15</code>.</li>
+      <li>Lookups to ipify or ifconfig.me alone are not indicators.</li>
+    </ul>
+  </div>
+  <div class="blk">
+    <h4>What to do</h4>
+    <ol>
+      <li>Ask developers: did you install or update Claude Code in Cursor on 29 Oct? Check the extension version.</li>
+      <li>Run Cursor's check commands and its clean-up scripts (<code>remediate-macos.sh</code> or <code>remediate-windows.ps1</code>). Uninstalling the extension is not enough.</li>
+      <li>Search endpoint, DNS and proxy logs for the indicators above. Remove any unknown SSH key from <code>authorized_keys</code>, such as one commented <code>svc-telemetry</code>.</li>
+      <li>If a machine was hit, rotate the credentials used on it: SSH keys, API keys, cloud and git tokens.</li>
+      <li>Longer term: allow-list extensions and pin versions on developer machines.</li>
+    </ol>
+  </div>
+  <section class="s1">
+    <div class="s1-top"><h4>How SentinelOne can help</h4><span class="b b-accent">Capability-based (inference)</span></div>
+    <div class="s1-grid">
+      <div>
+        <h5>Where it helps</h5>
+        <ul>
+          <li>I found no S1 post on this incident. What follows is what the product does in general.</li>
+          <li>Endpoint telemetry records process, file and network events. You can hunt for the indicators above: the IP, the file paths, the <code>SysMon</code> task, the <code>com.apple.sysmond</code> LaunchAgent and <code>ssh -N -R</code> tunnels. PowerQuery and Purple AI can run those hunts.</li>
+          <li>New scheduled tasks, LaunchAgents and cron entries, and reverse-SSH behaviour, are the kind of actions the agent is built to flag.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>What S1 does not do here</h5>
+        <ul>
+          <li>It cannot know an extension is malicious before you install it. It does not manage marketplace trust or remove the extension. Clean-up uses Cursor's scripts.</li>
+          <li>I found no S1 material saying Prompt Security stops malicious extensions.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Depends on</h5>
+        <p>The agent on developer machines (macOS, Windows, Linux). Telemetry retention long enough to reach back to 29 Oct.</p>
+      </div>
+    </div>
+  </section>
+  <details class="src">
+    <summary>Sources</summary>
+    <ul>
+      <li>Cursor: <a href="https://cursor.com/blog/claude-code-extension-security-notice">Claude Code extension security notice</a> (29 Oct, updated 30 Oct)</li>
+      <li>The Hacker News: <a href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html">report</a> (30 Oct), which cites OpenSourceMalware</li>
+    </ul>
+  </details>
+</article>
+
+</section>
+
+<section class="sec" id="developing">
+  <h2>Still developing</h2>
+  <p class="note">Stories from earlier in October that are not finished.</p>
+  <div class="mini">
+    <div class="badges"><span class="b b-warn">Watch</span><span class="b b-mute">APJ: India</span></div>
+    <h3>eMudhra certificate authority: 8 compromised CA keys</h3>
+    <ul>
+      <li>An Indian certificate authority made 8 intermediate CA keys with too little randomness. Anyone can compute the private keys from the public certificates. eMudhra blames a flaw in a key ceremony on 30 Apr 2025.</li>
+      <li>eMudhra says only one of the eight was in use and none issued end-user certificates. It says its own systems were not breached.</li>
+      <li>Chrome and Firefox blocked the certificates within hours of the 17 Oct report. Chrome planned to remove the root on 27 Oct (PT). I did not verify that it happened.</li>
+      <li>CERT-In said on 21 Oct that it had seen no confirmed malicious use.</li>
+      <li>Fixes shipped in Go (1.27.3, 1.26.10), Node.js (26.12.1, 24.22.1, 22.23.4), Firefox 158.0.1, certifi 2026.10.19, Ubuntu and Debian. WordPress 7.1.4 also updated its bundled root certificates. Red Hat posted a workaround (RHSB-2026-012).</li>
+      <li>Side effect: removing a root can break legitimate certificates. Test before you roll out.</li>
+    </ul>
+    <p><strong>What to do:</strong> update browsers, runtimes and trust stores. Check whether any of your certificates chain to an eMudhra emSign root. <strong>S1 angle:</strong> none direct. This is a certificate and trust-store problem.</p>
+    <p class="note">Source: <a href="https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html">The Hacker News, 20–21 Oct</a>.</p>
+  </div>
+  <div class="mini">
+    <div class="badges"><span class="b b-mute">Watch</span><span class="b b-mute">Not on KEV</span></div>
+    <h3>Another PHP bug: CVE-2026-115560</h3>
+    <ul>
+      <li>PHP (23 Oct) says remote code execution is unlikely. It needs the session handler switched with <code>ini_set</code> before <code>session_start</code>, with upload progress turned on.</li>
+      <li>There is no emergency fix. The fix and advisory come with the next release. Mitigation: <code>session.upload_progress.enabled=0</code>.</li>
+      <li>It is separate from PHP2Shell. No exploitation has been reported. It is not on KEV and has no EPSS score yet.</li>
+    </ul>
+    <p class="note">Source: <a href="https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html">The Hacker News</a>.</p>
+  </div>
+</section>
+
+<section class="sec" id="hits">
+  <h2>Quick hits</h2>
+  <p class="note">Serious, but not in the top five.</p>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th style="width:136px">ID</th><th>What</th><th style="width:150px">Signals</th><th style="width:150px">Fix</th><th style="width:150px">S1 angle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="id" data-label="ID">CVE-2026-48356</td><td data-label="What">Adobe Commerce and Magento: unrestricted file upload leads to code execution.</td><td data-label="Signals">CVSS: v3 9.3 (Shodan CVEDB)<br>EPSS: 44.6%<br>KEV: Yes · added 27 Oct, due 10 Nov</td><td data-label="Fix">Adobe bulletin APSB26-73.</td><td data-label="S1 angle">Capability-based: the agent can flag web-shell and shell activity on Linux web servers.</td></tr>
+        <tr><td class="id" data-label="ID">CVE-2026-118539</td><td data-label="What">Drupal Commerce Core: access bypass that can have a financial impact on the shop. Drupal says it is being exploited in the wild.</td><td data-label="Signals">CVSS: Drupal rating "Highly critical" (21/25)<br>EPSS: 0.2%<br>KEV: No</td><td data-label="Fix">Commerce 3.3.13 or 8.x-2.41 (SA-CONTRIB-2026-254). Audit your orders.</td><td data-label="S1 angle">None direct. It is an app logic flaw with no OS behaviour to detect.</td></tr>
+        <tr><td class="id" data-label="ID">CVE-2026-110447</td><td data-label="What">Collabora Online built-in CODE server (used inside Nextcloud): OS command injection leads to remote code execution. The CVE text says it was exploited in September and October.</td><td data-label="Signals">CVSS: v4 9.2 · v3 9.8<br>EPSS: 73.3%<br>KEV: Yes · added 23 Oct (deadline 26 Oct has passed)</td><td data-label="Fix">richdocumentscode 26.4.303 or later.</td><td data-label="S1 angle">Capability-based: the agent can flag shells started by the document server.</td></tr>
+        <tr><td class="id" data-label="ID">CVE-2026-106173</td><td data-label="What">FortiSIEM: path traversal in the gRPC service (TCP 27918) lets an attacker overwrite files and run code. Public proof of concept since 20 Oct (Horizon3.ai). The Canadian Cyber Centre says it is exploited, citing open-source reports.</td><td data-label="Signals">CVSS: 9.4 (per The Hacker News)<br>EPSS: 1.0%<br>KEV: No</td><td data-label="Fix">7.5.1 or later. 7.6 is not affected. Fortinet FG-IR-26-180.</td><td data-label="S1 angle">None direct.</td></tr>
+        <tr><td class="id" data-label="ID">CVE-2026-114625</td><td data-label="What">Arista VeloCloud Orchestrator (on-premises): SQL injection. A logged-in user can gain operator rights.</td><td data-label="Signals">CVSS: v4 9.4 · v3 9.9<br>EPSS: 1.0%<br>KEV: Yes · added 23 Oct (deadline 26 Oct has passed)</td><td data-label="Fix">Hosted versions are already patched. Arista advisory 0199.</td><td data-label="S1 angle">None direct. It is a network management appliance.</td></tr>
+        <tr><td class="id" data-label="ID">CVE-2026-41709</td><td data-label="What">Broadcom VMware ESX: some admin actions can go unlogged.</td><td data-label="Signals">CVSS: v3 2.7 (low)<br>EPSS: 0.7%<br>KEV: Yes · added 28 Oct, due 11 Nov</td><td data-label="Fix">Broadcom advisory 38017.</td><td data-label="S1 angle">Limited. It is a hypervisor patch. It is on KEV despite the low score, so patch on the KEV timeline.</td></tr>
+        <tr><td class="id" data-label="ID">No CVE listed</td><td data-label="What">WordPress 7.1.4 security release. Fixes a weakness in the upgrade process that can lead to remote code execution during the upgrade window. Also fixes many stored XSS bugs and a leak of unpublished customizer changesets to unauthenticated users. Updates bundled root certificates (eMudhra).</td><td data-label="Signals">CVSS: n/a<br>EPSS: n/a<br>KEV: No</td><td data-label="Fix">Update to 7.1.4. Backports to older branches are in progress. WordPress's notice does not mention exploitation.</td><td data-label="S1 angle">None direct.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:10px">Row sources: I read the Drupal advisory (<a href="https://www.drupal.org/sa-contrib-2026-254">SA-CONTRIB-2026-254</a>) and the <a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/">WordPress 7.1.4 post</a> in full. Scores come from FIRST EPSS, Shodan CVEDB and KEV notes. Details for FortiSIEM, Arista, Collabora, Adobe and Broadcom come from KEV notes, CVE records and The Hacker News. I did not open those vendors' own pages.</p>
+</section>
+
+<section class="sec" id="watch">
+  <h2>Watchlist</h2>
+  <ul class="plainlist">
+    <li><strong>Metasploit module for GitLab CVE-2026-97229.</strong> The pull request (#22017) was still open on 31 Oct. If it merges, expect wider attacks.</li>
+    <li><strong>GitLab CVE-2026-110264.</strong> Critical and patched on 21 Oct, but not on KEV yet. Patching now keeps you ahead of attackers.</li>
+    <li><strong>Brotli CVE-2026-111497.</strong> Imperva has not released its exploit. If one appears, the risk goes up fast.</li>
+  </ul>
+</section>
+
+<section class="sec" id="apj">
+  <h2>APJ watch</h2>
+  <div class="mini">
+    <div class="badges"><span class="b b-warn">Watch</span><span class="b b-accent">S1 capability-based</span></div>
+    <h3>ARTEX: an AI-driven intrusion toolkit used at scale (Vapor Panda)</h3>
+    <ul>
+      <li>CrowdStrike (29 Oct): from 17 Oct, one ARTEX controller was used against 200+ organisations in at least 14 countries over 11 days. Targets include foreign ministries, a Middle East interior ministry, 19 US organisations, and telecoms in the US, Belgium and the Philippines.</li>
+      <li>The group, Vapor Panda, has targeted Oceania among other regions since 2021. CrowdStrike confirmed hands-on activity at 9 organisations and password spraying against at least 12 more.</li>
+      <li>A human operator steers the AI agents. In one case the operator told them to find Windows hosts without the CrowdStrike Falcon sensor. Expect attackers to hunt for any endpoint that lacks protection.</li>
+      <li>CrowdStrike's advice: rotate keys and credentials, enforce SAML signature validation, require IMDSv2, restrict cloud roles that can run commands, patch edge appliances, and run EDR everywhere, including internal servers.</li>
+      <li>Hunt for ARTEX markers: <code>artx</code> or <code>artex</code> in command lines, <code>artx</code>-prefixed cloud roles, <code>art18-</code> comments, and <code>C:\ProgramData\artx5v\</code>.</li>
+      <li>Indicators (defanged): <code>nginxmysql[.]com</code> (45.153.126[.]223), <code>sqlserver-sqlite[.]com</code> (89.46.234[.]50), <code>www[.]ddduuuppp[.]com</code> (192.121.47[.]20).</li>
+    </ul>
+    <p><strong>S1 angle (capability-based):</strong> S1 has not published an ARTEX-specific protection statement. Its Week 43 roundup only reports on the campaign. In general, the agent watches process, file and network behaviour on endpoints and servers. Web shells, DLL side-loading and credential theft, which are techniques in CrowdStrike's list, are the kind of behaviour it is built to flag. It does not manage your SAML, IMDS or cloud role settings. Those are cloud configuration jobs. One lesson from the report: attackers look for hosts with no agent, so check your agent coverage.</p>
+    <p class="note">Sources: <a href="https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/">CrowdStrike</a> · <a href="https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html">The Hacker News, 30 Oct</a> · <a href="https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-43-8/">SentinelOne Week 43 roundup</a></p>
+  </div>
+  <ul class="plainlist">
+    <li><strong>Japan: SiteGuard Server Edition (CVE-2026-106931).</strong> OS command injection that gives root or SYSTEM. On KEV since 20 Oct. The 23 Oct deadline has passed. If you or your customers run it, apply the vendor update. I did not pull its CVSS or EPSS.</li>
+    <li><strong>India: eMudhra.</strong> See "Still developing" above.</li>
+    <li><strong>India: State Bank of India.</strong> <span class="b b-mute">Unverified</span> SBI told the stock exchange (NSE) on 21 Oct that 3,897 customer records were affected. A dark-web post claims about 375,000 records. SBI says no material impact. I did not confirm the source or the claim.</li>
+  </ul>
+</section>
+
+<section class="sec" id="sources">
+  <h2>Coverage notes and sources</h2>
+  <h3 style="font-size:1rem;margin:0 0 8px">What the S1 labels mean</h3>
+  <div class="legend">
+    <div><span class="b b-good">S1 published coverage</span><span>S1 has published a statement or detection content for this threat.</span></div>
+    <div><span class="b b-accent">Capability-based</span><span>No S1 statement found. The text describes what the product does in general. It is my inference, not a claim of coverage.</span></div>
+    <div><span class="b b-mute">Limited or no direct help</span><span>S1 products do not run on the affected system. Help is indirect at best.</span></div>
+  </div>
+  <h3 style="font-size:1rem;margin:0 0 8px">How this brief was built</h3>
+  <ul class="plainlist">
+    <li>Sources read: CISA KEV (GitHub mirror, catalog 2026.10.29, released 29 Oct 19:09 UTC), NVD API, FIRST EPSS (30 Oct), Shodan CVEDB, vendor advisories (GitLab, Ruby, Cisco, Drupal, WordPress, Node.js, Cursor, CrowdStrike), The Hacker News and SentinelOne's public blog. Vendor pages were read between 02:08 and about 02:50 UTC.</li>
+    <li>cisa.gov returned an empty page to my fetch tool, so I used CISA's mirror on GitHub. The Purple MCP KEV data was stale, so I did not use it.</li>
+    <li>EPSS values come from FIRST. Shodan reports different EPSS values.</li>
+    <li>The NVD count of 26 includes only CVEs with a CVSS v3 score, published 24 Oct to 31 Oct 02:00 UTC.</li>
+    <li>No tenant check was run. This brief uses public sources only.</li>
+    <li>Not verified: whether Chrome removed the eMudhra root on 27 Oct, and the SBI figures. S1's public vulnerability database page for CVE-2026-97229 was out of date, so I did not treat it as coverage.</li>
+  </ul>
+</section>
+
+<footer class="end">
+  <p>Compiled from public sources on 31 Oct 2026, 02:58 UTC. Check the original sources before you act on anything here.</p>
+  <p>Personal working brief. Not an official SentinelOne publication.</p>
+</footer>
+
+</div>
+</main>
+</body>
+</html>
