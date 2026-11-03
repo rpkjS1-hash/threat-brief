@@ -1,0 +1,311 @@
+{
+ "edition": "2026-11-03",
+ "epss_date": "2026-11-02",
+ "generated_utc": "2026-11-03T03:40:37Z",
+ "kev": {
+  "catalogVersion": "2026.10.30",
+  "count": 1766,
+  "dateReleased": "2026-10-30T17:02:45.3665Z",
+  "due_soon": 3,
+  "items": [
+   {
+    "cveID": "CVE-2026-118527",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-13",
+    "epss": null,
+    "pct": null,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111357",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-02",
+    "epss": 0.00533,
+    "pct": 0.45014,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-97229",
+    "dateAdded": "2026-10-29",
+    "dueDate": "2026-11-01",
+    "epss": 0.273,
+    "pct": 0.9806,
+    "product": "Community Edition and Enterprise Edition",
+    "ransomware": "Unknown",
+    "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+    "vendorProject": "GitLab",
+    "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-76418",
+    "dateAdded": "2026-10-29",
+    "dueDate": "2026-11-01",
+    "epss": 0.00821,
+    "pct": 0.57299,
+    "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-46300",
+    "dateAdded": "2026-10-28",
+    "dueDate": "2026-10-31",
+    "epss": 0.1613,
+    "pct": 0.96928,
+    "product": "Kernel",
+    "ransomware": "Unknown",
+    "shortDescription": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+    "vendorProject": "Linux",
+    "vulnerabilityName": "Linux Kernel Missing Initialization of a Variable Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-41709",
+    "dateAdded": "2026-10-28",
+    "dueDate": "2026-11-11",
+    "epss": 0.00689,
+    "pct": 0.52738,
+    "product": "VMware ESX",
+    "ransomware": "Unknown",
+    "shortDescription": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+    "vendorProject": "Broadcom",
+    "vulnerabilityName": "Broadcom VMWare ESX Insufficient Logging Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This issue affects the function sub_416B50 of the file /bin/ioos. The manipulation of the argument file_id leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.02823,
+    "id": "CVE-2026-120229",
+    "in_kev": false,
+    "pct": 0.86585,
+    "published": "2026-11-01",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in WAVLINK WN701AE 260105. Impacted is the function del_vlan_group of the component ioos Web Backend. The manipulation of the argument vlan_name results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.02211,
+    "id": "CVE-2026-120230",
+    "in_kev": false,
+    "pct": 0.82604,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A security vulnerability has been detected in WAVLINK WL-WN579A3-A 2026-03-10-94f93d4. The impacted element is the function set_wzdgwMesh of the file /cgi-bin/adm.cgi of the component Initial Setup Wizard. The manipulation of the argument wlan_ssid leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.0207,
+    "id": "CVE-2026-120195",
+    "in_kev": false,
+    "pct": 0.81428,
+    "published": "2026-11-01",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in WAVLINK WN579X3-D V250402. This affects the function port_forward of the file /cgi-bin/wapi.cgi. The manipulation of the argument Name results in os command injection. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.01687,
+    "id": "CVE-2026-120196",
+    "in_kev": false,
+    "pct": 0.77027,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This affects the function sub_4162A8 of the file /bin/ioos of the component ovpn_file Handler. Such manipulation of the argument file_id leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.01687,
+    "id": "CVE-2026-120238",
+    "in_kev": false,
+    "pct": 0.77027,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A vulnerability was identified in D-Link DIR-505 1.10B02. Affected is the function save_upload_file/mp_upload_file of the file /usr/bin/tftpd of the component TFTP Upload Filename Handler. The manipulation leads to stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used.",
+    "epss": 0.01346,
+    "id": "CVE-2026-120189",
+    "in_kev": false,
+    "pct": 0.71429,
+    "published": "2026-11-01",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "InternLM LMDeploy 0.9.0 through 0.18.0 contains an unauthenticated remote code execution vulnerability that allows remote attackers to run OS commands by sending pickled data to the /update_weights endpoint. Attackers can submit a base64-encoded crafted pickle in serialized_named_tensors, which ForkingPickler.loads deserializes without validation, executing commands as the api_server process.",
+    "epss": 0.0103,
+    "id": "CVE-2026-119706",
+    "in_kev": false,
+    "pct": 0.63708,
+    "published": "2026-10-30",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "The Acadlix LMS – AI Quiz Maker, Online Exam & Course Plugin for WordPress plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the post_delete_assessment_file_by_id function in all versions up to, and including, 1.1.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The route's permission callback only verifies a generic wp_rest nonce that the plugin itself emits inside the public acadlixOptions JavaScript object on every frontend page, effectively reducing the authentication requirement to unauthenticated.",
+    "epss": 0.00787,
+    "id": "CVE-2026-103882",
+    "in_kev": false,
+    "pct": 0.5615,
+    "published": "2026-10-31",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22",
+     "CWE-23"
+    ],
+    "desc": "A weakness has been identified in Oray Pugongying X5 Pro up to 7.6.1. Affected by this vulnerability is the function config_restore_ex of the file /etc/openwrt_release. This manipulation of the argument filename causes relative path traversal. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00727,
+    "id": "CVE-2026-120225",
+    "in_kev": false,
+    "pct": 0.54168,
+    "published": "2026-11-01",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
+    "epss": 0.00592,
+    "id": "CVE-2026-104317",
+    "in_kev": false,
+    "pct": 0.48277,
+    "published": "2026-10-29",
+    "score": 9.8,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python component code in a public workflow, executing it under the flow owner's runtime context within the server process. This bypasses the intended trust boundary where public execution paths are restricted to server-trusted component code.",
+    "epss": 0.00523,
+    "id": "CVE-2026-18894",
+    "in_kev": false,
+    "pct": 0.44337,
+    "published": "2026-10-29",
+    "score": 9.8,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.1.1 via the 'customer_note' parameter parameter. This is due to insufficient sanitization of the customer_note checkout field, which is inlined verbatim into invoice HTML, entity-decoded back into a live tag by simplehtmldom, reassembled into raw bytes by mPDF, and passed to unserialize() in _getObjAttr without validation. This makes it possible for unauthenticated attackers to execute code on the server. An unauthenticated attacker can trigger the vulnerable code path on a default install by placing an anonymous WooCommerce checkout via the public Store API (POST /wc/store/v1/checkout) using a Direct Bank Transfer or cheque payment method, which automatically transitions the order to 'on-hold' status and fires the plugin's invoice-generation hook.",
+    "epss": 0.0052,
+    "id": "CVE-2026-109220",
+    "in_kev": false,
+    "pct": 0.4419,
+    "published": "2026-10-31",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-1394"
+    ],
+    "desc": "MuseBot before 2.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge admin sessions by using the hard-coded default session_key 'muse_bot_session_key'. Attackers can sign a MuseBot-session cookie carrying a user_id to gain full administrative access, reading password hashes, chat records, and bot configuration, and stopping bots.",
+    "epss": 0.0052,
+    "id": "CVE-2026-119660",
+    "in_kev": false,
+    "pct": 0.44161,
+    "published": "2026-10-30",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+    "epss": 0.00516,
+    "id": "CVE-2026-103406",
+    "in_kev": false,
+    "pct": 0.43915,
+    "published": "2026-10-28",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-321"
+    ],
+    "desc": "OpenDeepWiki through 2.0.6 contains a hard-coded JWT signing key vulnerability that allows unauthenticated attackers to forge administrator tokens using the publicly known Jwt:SecretKey in appsettings.json. Attackers can mint HS256 bearer tokens with an Admin role claim to access /api/admin endpoints and control users, roles, repositories, settings, and API keys.",
+    "epss": 0.00371,
+    "id": "CVE-2026-119597",
+    "in_kev": false,
+    "pct": 0.31034,
+    "published": "2026-10-30",
+    "score": 9.8,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 32
+ },
+ "schema": 1,
+ "window_days": 7
+}
