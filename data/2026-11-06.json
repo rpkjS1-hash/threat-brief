@@ -1,0 +1,301 @@
+{
+ "edition": "2026-11-06",
+ "epss_date": "2026-11-05",
+ "generated_utc": "2026-11-06T02:47:11Z",
+ "kev": {
+  "catalogVersion": "2026.11.04",
+  "count": 1768,
+  "dateReleased": "2026-11-04T20:00:05.774Z",
+  "due_soon": 1,
+  "items": [
+   {
+    "cveID": "CVE-2024-27834",
+    "dateAdded": "2026-11-04",
+    "dueDate": "2026-11-18",
+    "epss": 0.01414,
+    "pct": 0.72829,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+    "vendorProject": "Apple",
+    "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-119977",
+    "dateAdded": "2026-11-03",
+    "dueDate": "2026-11-06",
+    "epss": 0.01157,
+    "pct": 0.67184,
+    "product": "WordPress Core",
+    "ransomware": "Unknown",
+    "shortDescription": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+    "vendorProject": "WordPress",
+    "vulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-118527",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-13",
+    "epss": 0.00822,
+    "pct": 0.57455,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111357",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-02",
+    "epss": 0.00533,
+    "pct": 0.45162,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-97229",
+    "dateAdded": "2026-10-29",
+    "dueDate": "2026-11-01",
+    "epss": 0.6522,
+    "pct": 0.99257,
+    "product": "Community Edition and Enterprise Edition",
+    "ransomware": "Unknown",
+    "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+    "vendorProject": "GitLab",
+    "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability"
+   }
+  ],
+  "padded": true
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in Linksys WRT54GL 4.30.18. The affected element is the function system of the file apply.cgi of the component Ping Diagnostic. This manipulation of the argument ping_ip causes os command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.02722,
+    "id": "CVE-2026-121930",
+    "in_kev": false,
+    "pct": 0.86101,
+    "published": "2026-11-04",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A security vulnerability has been detected in Linksys WRT54GL 4.30.18. The impacted element is the function system of the file apply.cgi of the component Traceroute Diagnostic Function. Such manipulation of the argument traceroute_ip leads to os command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.02722,
+    "id": "CVE-2026-121931",
+    "in_kev": false,
+    "pct": 0.861,
+    "published": "2026-11-04",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A security vulnerability has been detected in WAVLINK WN536AX6-A V260507_2.0.0. This issue affects the function sub_41a1d8 of the file /bin/ioos of the component WireGuard CLI Group Handler. Such manipulation of the argument group_name leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.02451,
+    "id": "CVE-2026-120277",
+    "in_kev": false,
+    "pct": 0.84445,
+    "published": "2026-11-02",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in Linksys E5350 1.0.00.037. This affects the function system of the file /wizard/apply.cgi. Performing a manipulation of the argument ping_ip/traceroute_ip results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02381,
+    "id": "CVE-2026-121932",
+    "in_kev": false,
+    "pct": 0.83956,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in WAVLINK WN701AE 260105. Impacted is the function del_vlan_group of the component ioos Web Backend. The manipulation of the argument vlan_name results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.02211,
+    "id": "CVE-2026-120230",
+    "in_kev": false,
+    "pct": 0.82668,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4.9. This affects the function testspeed_command of the file /fs2/bin/iscm. Performing a manipulation of the argument host results in os command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.01989,
+    "id": "CVE-2026-121607",
+    "in_kev": false,
+    "pct": 0.8071,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in WAVLINK WN579X3-D V250402. This affects the function port_forward of the file /cgi-bin/wapi.cgi. The manipulation of the argument Name results in os command injection. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.01687,
+    "id": "CVE-2026-120196",
+    "in_kev": false,
+    "pct": 0.77112,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This affects the function sub_4162A8 of the file /bin/ioos of the component ovpn_file Handler. Such manipulation of the argument file_id leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "epss": 0.01687,
+    "id": "CVE-2026-120238",
+    "in_kev": false,
+    "pct": 0.77112,
+    "published": "2026-11-01",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, <= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only strips literal '<?' sequences, combined with a post-interpolation placeholder cleanup that reassembles a valid '<?php' opener after the attacker-controlled value has already been embedded in the email template. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server.",
+    "epss": 0.01487,
+    "id": "CVE-2026-86596",
+    "in_kev": false,
+    "pct": 0.74139,
+    "published": "2026-11-02",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "InternLM LMDeploy 0.9.0 through 0.18.0 contains an unauthenticated remote code execution vulnerability that allows remote attackers to run OS commands by sending pickled data to the /update_weights endpoint. Attackers can submit a base64-encoded crafted pickle in serialized_named_tensors, which ForkingPickler.loads deserializes without validation, executing commands as the api_server process.",
+    "epss": 0.0103,
+    "id": "CVE-2026-119706",
+    "in_kev": false,
+    "pct": 0.63831,
+    "published": "2026-10-30",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287",
+     "CWE-306"
+    ],
+    "desc": "A flaw has been found in Linksys E5350 1.0.00.037. This impacts the function save_settings of the file /wizard/apply.cgi of the component Setup Wizard. Executing a manipulation of the argument wizard_router_pwd can lead to missing authentication. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00977,
+    "id": "CVE-2026-121933",
+    "in_kev": false,
+    "pct": 0.62279,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "A vulnerability was detected in Comfast CF-WR632AX 2.6.0.1. Affected by this vulnerability is an unknown functionality of the file /usr/bin/webmgnt of the component Multipart Parser. Performing a manipulation of the argument filename results in path traversal. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00822,
+    "id": "CVE-2026-122013",
+    "in_kev": false,
+    "pct": 0.57449,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "The BuddyPress XProfile Image Field plugin for WordPress is vulnerable to arbitrary file deletion in all versions up to, and including, 3.1.0. This is due to bpxp_image_field_update_on_user_activation() calling unlink() on a path built from visitor-supplied signup metadata with no realpath() resolution, no containment check against the profile-image directory and no extension allow-list. Submitting a zero-byte file with the 'field_N_hidden' parameter during registration makes the plugin store the raw value, which is then resolved against the document root when the pending signup is activated. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file (such as wp-config.php) is deleted. Requires open registration and an image-type profile field on the signup form.",
+    "epss": 0.00779,
+    "id": "CVE-2026-120518",
+    "in_kev": false,
+    "pct": 0.5605,
+    "published": "2026-11-03",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "A vulnerability was determined in Linksys E5600 1.1.0.26. Affected is an unknown function of the file /cgi-bin/mesh_login.cgi of the component Login Handler. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.00754,
+    "id": "CVE-2026-121615",
+    "in_kev": false,
+    "pct": 0.55249,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-290"
+    ],
+    "desc": "VitaFit cloud API before 2026-10-30 contained an authentication bypass vulnerability that allows remote attackers to obtain a full session for a victim's account by submitting a linked Google or Facebook account identifier to the POST /front/login/sns/ endpoint without providing proof of ownership from the identity provider. Attackers can forge a login using an identifier exposed through account enumeration to read and modify the victim's profile and delete the account's authentication record, preventing the legitimate user from logging in.",
+    "epss": 0.00661,
+    "id": "CVE-2026-54384",
+    "in_kev": false,
+    "pct": 0.51778,
+    "published": "2026-11-04",
+    "score": 9.8,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 38
+ },
+ "schema": 1,
+ "window_days": 7
+}
