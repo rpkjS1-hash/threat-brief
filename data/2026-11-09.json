@@ -1,0 +1,299 @@
+{
+ "edition": "2026-11-09",
+ "epss_date": "2026-11-08",
+ "generated_utc": "2026-11-09T01:55:12Z",
+ "kev": {
+  "catalogVersion": "2026.11.06",
+  "count": 1769,
+  "dateReleased": "2026-11-06T19:44:45.1797Z",
+  "due_soon": 3,
+  "items": [
+   {
+    "cveID": "CVE-2026-19868",
+    "dateAdded": "2026-11-06",
+    "dueDate": "2026-11-20",
+    "epss": 0.00621,
+    "pct": 0.50046,
+    "product": "SonicOS SSLVPN",
+    "ransomware": "Unknown",
+    "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+    "vendorProject": "SonicWall",
+    "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-27834",
+    "dateAdded": "2026-11-04",
+    "dueDate": "2026-11-18",
+    "epss": 0.01502,
+    "pct": 0.74475,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+    "vendorProject": "Apple",
+    "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-119977",
+    "dateAdded": "2026-11-03",
+    "dueDate": "2026-11-06",
+    "epss": 0.01157,
+    "pct": 0.67278,
+    "product": "WordPress Core",
+    "ransomware": "Unknown",
+    "shortDescription": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+    "vendorProject": "WordPress",
+    "vulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-118527",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-13",
+    "epss": 0.00822,
+    "pct": 0.57563,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111357",
+    "dateAdded": "2026-10-30",
+    "dueDate": "2026-11-02",
+    "epss": 0.00533,
+    "pct": 0.4527,
+    "product": "Connect Secure",
+    "ransomware": "Unknown",
+    "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+    "vendorProject": "Ivanti",
+    "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability"
+   }
+  ],
+  "padded": true
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in Linksys WRT54GL 4.30.18. The affected element is the function system of the file apply.cgi of the component Ping Diagnostic. This manipulation of the argument ping_ip causes os command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.02722,
+    "id": "CVE-2026-121930",
+    "in_kev": false,
+    "pct": 0.8614,
+    "published": "2026-11-04",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A security vulnerability has been detected in Linksys WRT54GL 4.30.18. The impacted element is the function system of the file apply.cgi of the component Traceroute Diagnostic Function. Such manipulation of the argument traceroute_ip leads to os command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.02722,
+    "id": "CVE-2026-121931",
+    "in_kev": false,
+    "pct": 0.86139,
+    "published": "2026-11-04",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in Linksys E5350 1.0.00.037. This affects the function system of the file /wizard/apply.cgi. Performing a manipulation of the argument ping_ip/traceroute_ip results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02381,
+    "id": "CVE-2026-121932",
+    "in_kev": false,
+    "pct": 0.84005,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4.9. This affects the function testspeed_command of the file /fs2/bin/iscm. Performing a manipulation of the argument host results in os command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.01989,
+    "id": "CVE-2026-121607",
+    "in_kev": false,
+    "pct": 0.80769,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary commands due to OS command injection. User-supplied input is not properly neutralized before it is passed to the operating system, which could allow commands to run on the underlying host.",
+    "epss": 0.01908,
+    "id": "CVE-2026-17402",
+    "in_kev": false,
+    "pct": 0.79905,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-122"
+    ],
+    "desc": "A vulnerability was determined in Tenda AC19 16.03.10.07. Affected by this issue is the function saveParentControlInfo of the file /goform/saveParentControlInfo. This manipulation of the argument deviceId causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
+    "epss": 0.01021,
+    "id": "CVE-2026-123966",
+    "in_kev": false,
+    "pct": 0.6366,
+    "published": "2026-11-07",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287",
+     "CWE-306"
+    ],
+    "desc": "A flaw has been found in Linksys E5350 1.0.00.037. This impacts the function save_settings of the file /wizard/apply.cgi of the component Setup Wizard. Executing a manipulation of the argument wizard_router_pwd can lead to missing authentication. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00977,
+    "id": "CVE-2026-121933",
+    "in_kev": false,
+    "pct": 0.62375,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to improper neutralization of special elements in an OS command.",
+    "epss": 0.00926,
+    "id": "CVE-2026-17408",
+    "in_kev": false,
+    "pct": 0.6071,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to a path traversal vulnerability.",
+    "epss": 0.00922,
+    "id": "CVE-2026-17340",
+    "in_kev": false,
+    "pct": 0.60569,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and perform unauthorized administrative actions due to a path traversal vulnerability.",
+    "epss": 0.00899,
+    "id": "CVE-2026-17147",
+    "in_kev": false,
+    "pct": 0.59875,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code.",
+    "epss": 0.0085,
+    "id": "CVE-2026-17342",
+    "in_kev": false,
+    "pct": 0.58421,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code. A user-supplied value can influence code that the product generates, which could lead to code execution.",
+    "epss": 0.0085,
+    "id": "CVE-2026-17359",
+    "in_kev": false,
+    "pct": 0.58422,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-120"
+    ],
+    "desc": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. The impacted element is the function setLanguageCfg of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument langType results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.00841,
+    "id": "CVE-2026-123959",
+    "in_kev": false,
+    "pct": 0.5813,
+    "published": "2026-11-07",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to a path traversal vulnerability.",
+    "epss": 0.00835,
+    "id": "CVE-2026-17239",
+    "in_kev": false,
+    "pct": 0.57935,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "A vulnerability was detected in Comfast CF-WR632AX 2.6.0.1. Affected by this vulnerability is an unknown functionality of the file /usr/bin/webmgnt of the component Multipart Parser. Performing a manipulation of the argument filename results in path traversal. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00822,
+    "id": "CVE-2026-122013",
+    "in_kev": false,
+    "pct": 0.57557,
+    "published": "2026-11-04",
+    "score": 10.0,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 95
+ },
+ "schema": 1,
+ "window_days": 7
+}
