@@ -1,0 +1,309 @@
+{
+ "edition": "2026-11-10",
+ "epss_date": "2026-11-09",
+ "generated_utc": "2026-11-10T04:17:36Z",
+ "kev": {
+  "catalogVersion": "2026.11.09",
+  "count": 1773,
+  "dateReleased": "2026-11-09T19:54:37.4945Z",
+  "due_soon": 8,
+  "items": [
+   {
+    "cveID": "CVE-2026-123218",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00396,
+    "pct": 0.34123,
+    "product": "Aspera Faspex",
+    "ransomware": "Unknown",
+    "shortDescription": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+    "vendorProject": "IBM",
+    "vulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123158",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.01014,
+    "pct": 0.63482,
+    "product": "OpenSSH",
+    "ransomware": "Unknown",
+    "shortDescription": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+    "vendorProject": "OpenBSD",
+    "vulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116779",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.01299,
+    "pct": 0.70632,
+    "product": "FreeSwitch",
+    "ransomware": "Unknown",
+    "shortDescription": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+    "vendorProject": "SignalWire",
+    "vulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-102895",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00331,
+    "pct": 0.2646,
+    "product": "GPUStack",
+    "ransomware": "Unknown",
+    "shortDescription": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+    "vendorProject": "GPUStack",
+    "vulnerabilityName": "GPUStack Improper Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-19868",
+    "dateAdded": "2026-11-06",
+    "dueDate": "2026-11-20",
+    "epss": 0.00621,
+    "pct": 0.50063,
+    "product": "SonicOS SSLVPN",
+    "ransomware": "Unknown",
+    "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+    "vendorProject": "SonicWall",
+    "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-27834",
+    "dateAdded": "2026-11-04",
+    "dueDate": "2026-11-18",
+    "epss": 0.01502,
+    "pct": 0.74487,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+    "vendorProject": "Apple",
+    "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Chengdu Feiyuxing Technology VW2100 and VEC10GP 1.0 B-MB3W202-210825-r11775. This impacts the function handle_wechat_cn_wifi of the file var/html/webserver of the component Weixin Auth Endpoint. The manipulation of the argument extend results in os command injection. The attack can be executed remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02794,
+    "id": "CVE-2026-124580",
+    "in_kev": false,
+    "pct": 0.8653,
+    "published": "2026-11-09",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Chengdu Feiyuxing Technology VW2100 and VEC10GP 1.0 B-MB3W202-210825-r11775. This issue affects the function add_expmac of the file var/html/webserver of the component Web Administration Interface. The manipulation of the argument mac results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02208,
+    "id": "CVE-2026-124585",
+    "in_kev": false,
+    "pct": 0.82713,
+    "published": "2026-11-09",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "A weakness has been identified in Intelbras SG 2404 PoE L2+ 1.00.70/1.00.72. The affected element is an unknown function of the file /EXCU_SHELL of the component Web Management Interface. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.00.74 is sufficient to fix this issue. Upgrading the affected component is advised.",
+    "epss": 0.02067,
+    "id": "CVE-2026-124577",
+    "in_kev": false,
+    "pct": 0.81535,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary commands due to OS command injection. User-supplied input is not properly neutralized before it is passed to the operating system, which could allow commands to run on the underlying host.",
+    "epss": 0.01908,
+    "id": "CVE-2026-17402",
+    "in_kev": false,
+    "pct": 0.79915,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-120"
+    ],
+    "desc": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. The impacted element is the function setLanguageCfg of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument langType results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.00841,
+    "id": "CVE-2026-123959",
+    "in_kev": false,
+    "pct": 0.58147,
+    "published": "2026-11-07",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for other users due to improper authentication. Authentication against a connected directory service is not sufficiently enforced, which could allow another user's identity to be assumed.",
+    "epss": 0.00766,
+    "id": "CVE-2026-16720",
+    "in_kev": false,
+    "pct": 0.55741,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-290"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain unauthorized access to sensitive API catalog and runtime configuration data due to improper authentication. Information supplied by the client is not sufficiently verified, which could allow a caller to appear as a trusted party.",
+    "epss": 0.00722,
+    "id": "CVE-2026-17278",
+    "in_kev": false,
+    "pct": 0.54279,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-122"
+    ],
+    "desc": "A vulnerability was found in D-Link DIR-878 1.20B05. This affects the function GetCAPTCHAsetting of the file bin/prog.cgi of the component HNAP Handler. Performing a manipulation of the argument uid results in heap-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.00721,
+    "id": "CVE-2026-124560",
+    "in_kev": false,
+    "pct": 0.54228,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-290"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and modify API configurations due to improper authentication. Identity information supplied in requests is not sufficiently verified, which could allow a caller to impersonate another user.",
+    "epss": 0.00672,
+    "id": "CVE-2026-18838",
+    "in_kev": false,
+    "pct": 0.52356,
+    "published": "2026-11-07",
+    "score": 9.4,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-639"
+    ],
+    "desc": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.",
+    "epss": 0.00668,
+    "id": "CVE-2026-109469",
+    "in_kev": false,
+    "pct": 0.52195,
+    "published": "2026-11-06",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-79"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary JavaScript and obtain sensitive information due to improper input validation.",
+    "epss": 0.00666,
+    "id": "CVE-2026-17146",
+    "in_kev": false,
+    "pct": 0.5212,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain elevated privileges due to improper authentication.",
+    "epss": 0.00662,
+    "id": "CVE-2026-17158",
+    "in_kev": false,
+    "pct": 0.51947,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-90"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain unauthorized administrative access to other tenants due to LDAP injection. User-supplied input is not properly neutralized in directory queries, which could change the query and grant access beyond the user's own tenant.",
+    "epss": 0.00655,
+    "id": "CVE-2026-17392",
+    "in_kev": false,
+    "pct": 0.51654,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-88"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify other tenants' portal data due to improper neutralization of argument delimiters.",
+    "epss": 0.00655,
+    "id": "CVE-2026-17410",
+    "in_kev": false,
+    "pct": 0.51654,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-120"
+    ],
+    "desc": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument Key1Str1 results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.00635,
+    "id": "CVE-2026-124057",
+    "in_kev": false,
+    "pct": 0.50749,
+    "published": "2026-11-07",
+    "score": 9.1,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 60
+ },
+ "schema": 1,
+ "window_days": 7
+}
