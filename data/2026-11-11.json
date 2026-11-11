@@ -1,0 +1,369 @@
+{
+ "edition": "2026-11-11",
+ "epss_date": "2026-11-10",
+ "generated_utc": "2026-11-11T02:11:09Z",
+ "kev": {
+  "catalogVersion": "2026.11.10",
+  "count": 1779,
+  "dateReleased": "2026-11-10T19:03:29.8375Z",
+  "due_soon": 8,
+  "items": [
+   {
+    "cveID": "CVE-2026-125350",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": null,
+    "pct": null,
+    "product": "Chromium",
+    "ransomware": "Unknown",
+    "shortDescription": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+    "vendorProject": "Google",
+    "vulnerabilityName": "Google Chromium Use-After-Free Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-124194",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": null,
+    "pct": null,
+    "product": "Office",
+    "ransomware": "Unknown",
+    "shortDescription": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+    "vendorProject": "Microsoft",
+    "vulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116606",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.01602,
+    "pct": 0.76026,
+    "product": "Barracuda Email Security Gateway (ESG)",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111793",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00274,
+    "pct": 0.19971,
+    "product": "Webtop Media Transcoder",
+    "ransomware": "Unknown",
+    "shortDescription": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+    "vendorProject": "Openwave Messaging Limited",
+    "vulnerabilityName": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111560",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.0106,
+    "pct": 0.6483,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-20320",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00385,
+    "pct": 0.32917,
+    "product": "BroadWorks",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123218",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00705,
+    "pct": 0.53668,
+    "product": "Aspera Faspex",
+    "ransomware": "Unknown",
+    "shortDescription": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+    "vendorProject": "IBM",
+    "vulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123158",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.16501,
+    "pct": 0.97016,
+    "product": "OpenSSH",
+    "ransomware": "Unknown",
+    "shortDescription": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+    "vendorProject": "OpenBSD",
+    "vulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116779",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.02177,
+    "pct": 0.82481,
+    "product": "FreeSwitch",
+    "ransomware": "Unknown",
+    "shortDescription": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+    "vendorProject": "SignalWire",
+    "vulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-102895",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00555,
+    "pct": 0.46664,
+    "product": "GPUStack",
+    "ransomware": "Unknown",
+    "shortDescription": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+    "vendorProject": "GPUStack",
+    "vulnerabilityName": "GPUStack Improper Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-19868",
+    "dateAdded": "2026-11-06",
+    "dueDate": "2026-11-20",
+    "epss": 0.00532,
+    "pct": 0.45297,
+    "product": "SonicOS SSLVPN",
+    "ransomware": "Unknown",
+    "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+    "vendorProject": "SonicWall",
+    "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Chengdu Feiyuxing Technology VW2100 and VEC10GP 1.0 B-MB3W202-210825-r11775. This impacts the function handle_wechat_cn_wifi of the file var/html/webserver of the component Weixin Auth Endpoint. The manipulation of the argument extend results in os command injection. The attack can be executed remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02794,
+    "id": "CVE-2026-124580",
+    "in_kev": false,
+    "pct": 0.86548,
+    "published": "2026-11-09",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in Chengdu Feiyuxing Technology VW2100 and VEC10GP 1.0 B-MB3W202-210825-r11775. This issue affects the function add_expmac of the file var/html/webserver of the component Web Administration Interface. The manipulation of the argument mac results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02208,
+    "id": "CVE-2026-124585",
+    "in_kev": false,
+    "pct": 0.82732,
+    "published": "2026-11-09",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "A weakness has been identified in Intelbras SG 2404 PoE L2+ 1.00.70/1.00.72. The affected element is an unknown function of the file /EXCU_SHELL of the component Web Management Interface. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.00.74 is sufficient to fix this issue. Upgrading the affected component is advised.",
+    "epss": 0.02067,
+    "id": "CVE-2026-124577",
+    "in_kev": false,
+    "pct": 0.81558,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-321"
+    ],
+    "desc": "INDOTALENT WHMS (Asp.Net-Core-Inventory-Order-Management-System) before 10.20261109 contains an authentication bypass vulnerability caused by a hard-coded JWT signing key, issuer and audience in appsettings.json. Unauthenticated remote attackers can forge tokens for any user ID and role that the Tokens/DI.cs validator trusts, gaining administrator access to the entire API.",
+    "epss": 0.00834,
+    "id": "CVE-2026-125383",
+    "in_kev": false,
+    "pct": 0.57966,
+    "published": "2026-11-10",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for other users due to improper authentication. Authentication against a connected directory service is not sufficiently enforced, which could allow another user's identity to be assumed.",
+    "epss": 0.00766,
+    "id": "CVE-2026-16720",
+    "in_kev": false,
+    "pct": 0.55791,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-122"
+    ],
+    "desc": "A vulnerability was found in D-Link DIR-878 1.20B05. This affects the function GetCAPTCHAsetting of the file bin/prog.cgi of the component HNAP Handler. Performing a manipulation of the argument uid results in heap-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.00721,
+    "id": "CVE-2026-124560",
+    "in_kev": false,
+    "pct": 0.54278,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-321"
+    ],
+    "desc": "Kubero 3.0.0 through 3.1.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to forge administrative JWTs by using a hardcoded fallback signing secret when JWT_SECRET is unset. Attackers can sign tokens with arbitrary role, userGroups and permissions claims, which JwtStrategy.validate() trusts without a database lookup, to take control of pipelines, applications, users and API tokens.",
+    "epss": 0.00683,
+    "id": "CVE-2026-125370",
+    "in_kev": false,
+    "pct": 0.52832,
+    "published": "2026-11-10",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-290"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and modify API configurations due to improper authentication. Identity information supplied in requests is not sufficiently verified, which could allow a caller to impersonate another user.",
+    "epss": 0.00672,
+    "id": "CVE-2026-18838",
+    "in_kev": false,
+    "pct": 0.52407,
+    "published": "2026-11-07",
+    "score": 9.4,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-639"
+    ],
+    "desc": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.",
+    "epss": 0.00668,
+    "id": "CVE-2026-109469",
+    "in_kev": false,
+    "pct": 0.52245,
+    "published": "2026-11-06",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-79"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary JavaScript and obtain sensitive information due to improper input validation.",
+    "epss": 0.00666,
+    "id": "CVE-2026-17146",
+    "in_kev": false,
+    "pct": 0.52169,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-88"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify other tenants' portal data due to improper neutralization of argument delimiters.",
+    "epss": 0.00655,
+    "id": "CVE-2026-17410",
+    "in_kev": false,
+    "pct": 0.51705,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-120"
+    ],
+    "desc": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument Key1Str1 results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.00635,
+    "id": "CVE-2026-124057",
+    "in_kev": false,
+    "pct": 0.50799,
+    "published": "2026-11-07",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\\\Jobs\\\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.",
+    "epss": 0.00621,
+    "id": "CVE-2026-124079",
+    "in_kev": false,
+    "pct": 0.50107,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-259",
+     "CWE-798"
+    ],
+    "desc": "A vulnerability has been found in D-Link M60 1.12.B01. Impacted is the function system of the file /etc/emDaemon/mosquitto.conf of the component emDaemon MQTT Broker. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
+    "epss": 0.00606,
+    "id": "CVE-2026-125086",
+    "in_kev": false,
+    "pct": 0.49338,
+    "published": "2026-11-10",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-798"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control due to the use of hard-coded credentials.",
+    "epss": 0.00576,
+    "id": "CVE-2026-17360",
+    "in_kev": false,
+    "pct": 0.47822,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 68
+ },
+ "schema": 1,
+ "window_days": 7
+}
