@@ -1,0 +1,353 @@
+{
+ "edition": "2026-11-13",
+ "epss_date": "2026-11-12",
+ "generated_utc": "2026-11-13T02:51:48Z",
+ "kev": {
+  "catalogVersion": "2026.11.10",
+  "count": 1779,
+  "dateReleased": "2026-11-10T19:03:29.8375Z",
+  "due_soon": 3,
+  "items": [
+   {
+    "cveID": "CVE-2026-125350",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00962,
+    "pct": 0.62112,
+    "product": "Chromium",
+    "ransomware": "Unknown",
+    "shortDescription": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+    "vendorProject": "Google",
+    "vulnerabilityName": "Google Chromium Use-After-Free Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-124194",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.0162,
+    "pct": 0.76419,
+    "product": "Office",
+    "ransomware": "Unknown",
+    "shortDescription": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+    "vendorProject": "Microsoft",
+    "vulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116606",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.08934,
+    "pct": 0.95313,
+    "product": "Barracuda Email Security Gateway (ESG)",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111793",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00638,
+    "pct": 0.51066,
+    "product": "Webtop Media Transcoder",
+    "ransomware": "Unknown",
+    "shortDescription": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+    "vendorProject": "Openwave Messaging Limited",
+    "vulnerabilityName": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111560",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.06196,
+    "pct": 0.93603,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-20320",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.0082,
+    "pct": 0.57739,
+    "product": "BroadWorks",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123218",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00535,
+    "pct": 0.45625,
+    "product": "Aspera Faspex",
+    "ransomware": "Unknown",
+    "shortDescription": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+    "vendorProject": "IBM",
+    "vulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123158",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.189,
+    "pct": 0.97335,
+    "product": "OpenSSH",
+    "ransomware": "Unknown",
+    "shortDescription": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+    "vendorProject": "OpenBSD",
+    "vulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116779",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.02473,
+    "pct": 0.84759,
+    "product": "FreeSwitch",
+    "ransomware": "Unknown",
+    "shortDescription": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+    "vendorProject": "SignalWire",
+    "vulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-102895",
+    "dateAdded": "2026-11-09",
+    "dueDate": "2026-11-12",
+    "epss": 0.00517,
+    "pct": 0.44486,
+    "product": "GPUStack",
+    "ransomware": "Unknown",
+    "shortDescription": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+    "vendorProject": "GPUStack",
+    "vulnerabilityName": "GPUStack Improper Authentication Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-863"
+    ],
+    "desc": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
+    "epss": 0.00862,
+    "id": "CVE-2026-120002",
+    "in_kev": false,
+    "pct": 0.59031,
+    "published": "2026-11-10",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for other users due to improper authentication. Authentication against a connected directory service is not sufficiently enforced, which could allow another user's identity to be assumed.",
+    "epss": 0.00766,
+    "id": "CVE-2026-16720",
+    "in_kev": false,
+    "pct": 0.55963,
+    "published": "2026-11-07",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-290"
+    ],
+    "desc": "WWBN AVideo 6.5 through 29.7.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to log in as any user via Hybridauth social login display names. Attackers can set their X, Facebook, Yahoo or LinkedIn display name to a victim's username and withhold email, causing login.json.php or oauth2.php to log them in as that account, including administrators, without a password.",
+    "epss": 0.00753,
+    "id": "CVE-2026-126542",
+    "in_kev": false,
+    "pct": 0.55551,
+    "published": "2026-11-11",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "The Basel Post Types plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.18. The vulnerability exists because a missing-quotes coding error in the defined() call for SECURE_AUTH_SALT inside BASEL_Auth::get_config() causes PHP to evaluate the constant's value rather than its name, making the check always fail and permanently falling back to the static hardcoded salt 2NlBUibcszrVtNmDnxqDbwCOpLWq91eatIz6O1O that is publicly visible in the theme source code; because this salt is static and known, an attacker can compute a valid Opauth signature entirely offline and submit a forged ?opauth callback to the unauthenticated init hook endpoint processed by register_or_login. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user, including administrators, by forging a callback tied to a known target account email address — bypassing all password verification, multi-factor authentication, and ownership checks, and receiving a fully authenticated session cookie via wc_set_customer_auth_cookie(). Exploitation requires WooCommerce to be active and at least one Basel social-login provider (Facebook, Google, or VKontakte) to be configured with a valid app_id and app_secret in the theme settings.",
+    "epss": 0.00704,
+    "id": "CVE-2026-89324",
+    "in_kev": false,
+    "pct": 0.53783,
+    "published": "2026-11-10",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-321"
+    ],
+    "desc": "Kubero 3.0.0 through 3.1.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to forge administrative JWTs by using a hardcoded fallback signing secret when JWT_SECRET is unset. Attackers can sign tokens with arbitrary role, userGroups and permissions claims, which JwtStrategy.validate() trusts without a database lookup, to take control of pipelines, applications, users and API tokens.",
+    "epss": 0.00683,
+    "id": "CVE-2026-125370",
+    "in_kev": false,
+    "pct": 0.53001,
+    "published": "2026-11-10",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-88"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify other tenants' portal data due to improper neutralization of argument delimiters.",
+    "epss": 0.00655,
+    "id": "CVE-2026-17410",
+    "in_kev": false,
+    "pct": 0.51874,
+    "published": "2026-11-07",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Improper control of generation of code ('code injection') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
+    "epss": 0.0064,
+    "id": "CVE-2026-120779",
+    "in_kev": false,
+    "pct": 0.51171,
+    "published": "2026-11-10",
+    "score": 9.6,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-89"
+    ],
+    "desc": "An improper neutralization of special elements used in an SQL command vulnerability in the Auth API in Synology DiskStation Manager (DSM) before 7.2.1-69057-13, 7.2.2-72806-10, 7.3.2-86009-5, and 7.4.1-90080-1 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.",
+    "epss": 0.00634,
+    "id": "CVE-2026-76954",
+    "in_kev": false,
+    "pct": 0.50912,
+    "published": "2026-11-12",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\\\Jobs\\\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.",
+    "epss": 0.00621,
+    "id": "CVE-2026-124079",
+    "in_kev": false,
+    "pct": 0.50277,
+    "published": "2026-11-09",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-321"
+    ],
+    "desc": "NextScan 1.1.0 through 1.2.0 contains an authentication bypass vulnerability in ns-admin that allows unauthenticated attackers to forge administrator tokens using a hardcoded JWT signing key. Attackers can sign an HS256 X-Access-Token carrying the public super administrator role ID to gain full access to user management, scan tasks and stored vulnerability results.",
+    "epss": 0.00615,
+    "id": "CVE-2026-126797",
+    "in_kev": false,
+    "pct": 0.49975,
+    "published": "2026-11-11",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-259",
+     "CWE-798"
+    ],
+    "desc": "A vulnerability has been found in D-Link M60 1.12.B01. Impacted is the function system of the file /etc/emDaemon/mosquitto.conf of the component emDaemon MQTT Broker. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit has been disclosed to the public and may be used.",
+    "epss": 0.00606,
+    "id": "CVE-2026-125086",
+    "in_kev": false,
+    "pct": 0.49505,
+    "published": "2026-11-10",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-307"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to perform unauthenticated brute-force attacks to obtain valid credentials due to improper restriction of excessive authentication attempts.",
+    "epss": 0.00571,
+    "id": "CVE-2026-17280",
+    "in_kev": false,
+    "pct": 0.47729,
+    "published": "2026-11-07",
+    "score": 9.1,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-601"
+    ],
+    "desc": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform account takeover due to an open redirect vulnerability. The redirect address used during OAuth 2.0 sign-in is not sufficiently validated, which could allow authentication results to be sent to an attacker-controlled location.",
+    "epss": 0.00525,
+    "id": "CVE-2026-17291",
+    "in_kev": false,
+    "pct": 0.45036,
+    "published": "2026-11-07",
+    "score": 9.0,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-918"
+    ],
+    "desc": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. Restrictions on outbound requests can be bypassed, so the server could be made to contact unintended destinations and return the response.",
+    "epss": 0.00441,
+    "id": "CVE-2026-17131",
+    "in_kev": false,
+    "pct": 0.38813,
+    "published": "2026-11-07",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-201"
+    ],
+    "desc": "OpenAM from 14.0.0 before 16.1.4 contains an information disclosure vulnerability that allows unauthenticated attackers to read live session tokens from the notification WebSocket. Attackers can bypass the agent-only check through an unvalidated internal forward on legacy Liberty ID-FF endpoints, collecting iPlanetDirectoryPro tokens to hijack user and administrator sessions.",
+    "epss": 0.00428,
+    "id": "CVE-2026-123551",
+    "in_kev": false,
+    "pct": 0.37481,
+    "published": "2026-11-08",
+    "score": 10.0,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 25
+ },
+ "schema": 1,
+ "window_days": 7
+}
