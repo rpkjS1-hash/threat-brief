@@ -1,0 +1,332 @@
+{
+ "edition": "2026-11-16",
+ "epss_date": "2026-11-15",
+ "generated_utc": "2026-11-16T02:21:53Z",
+ "kev": {
+  "catalogVersion": "2026.11.13",
+  "count": 1781,
+  "dateReleased": "2026-11-13T20:24:18.3008Z",
+  "due_soon": 3,
+  "items": [
+   {
+    "cveID": "CVE-2026-123039",
+    "dateAdded": "2026-11-13",
+    "dueDate": "2026-11-16",
+    "epss": 0.02191,
+    "pct": 0.82736,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+    "vendorProject": "Check Point",
+    "vulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-114713",
+    "dateAdded": "2026-11-13",
+    "dueDate": "2026-11-16",
+    "epss": 0.00508,
+    "pct": 0.43875,
+    "product": "UnrealIRCd",
+    "ransomware": "Unknown",
+    "shortDescription": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+    "vendorProject": "UnrealIRCd",
+    "vulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-125350",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00962,
+    "pct": 0.62181,
+    "product": "Chromium",
+    "ransomware": "Unknown",
+    "shortDescription": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+    "vendorProject": "Google",
+    "vulnerabilityName": "Google Chromium Use-After-Free Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-124194",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.0162,
+    "pct": 0.7647,
+    "product": "Office",
+    "ransomware": "Unknown",
+    "shortDescription": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+    "vendorProject": "Microsoft",
+    "vulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-116606",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.10947,
+    "pct": 0.95956,
+    "product": "Barracuda Email Security Gateway (ESG)",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111793",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00638,
+    "pct": 0.5114,
+    "product": "Webtop Media Transcoder",
+    "ransomware": "Unknown",
+    "shortDescription": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+    "vendorProject": "Openwave Messaging Limited",
+    "vulnerabilityName": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-111560",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-13",
+    "epss": 0.09082,
+    "pct": 0.95377,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+    "vendorProject": "Barracuda Networks",
+    "vulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-20320",
+    "dateAdded": "2026-11-10",
+    "dueDate": "2026-11-24",
+    "epss": 0.00976,
+    "pct": 0.62655,
+    "product": "BroadWorks",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket.",
+    "epss": 0.02399,
+    "id": "CVE-2026-129433",
+    "in_kev": false,
+    "pct": 0.8429,
+    "published": "2026-11-14",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A vulnerability was detected in D-Link DIR-600L 2.17/2.17b02. Affected by this vulnerability is the function authenticationcgi_main of the file authentication.cgi. Performing a manipulation of the argument id/password results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
+    "epss": 0.01788,
+    "id": "CVE-2026-129353",
+    "in_kev": false,
+    "pct": 0.78702,
+    "published": "2026-11-15",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-787"
+    ],
+    "desc": "A security vulnerability has been detected in TRENDnet TEW-657BRM 1.00.1. This vulnerability affects the function sprintf of the file /setup.cgi of the component mini_httpd. Such manipulation leads to out-of-bounds write. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "epss": 0.00879,
+    "id": "CVE-2026-129351",
+    "in_kev": false,
+    "pct": 0.59644,
+    "published": "2026-11-14",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
+    "epss": 0.00869,
+    "id": "CVE-2026-129354",
+    "in_kev": false,
+    "pct": 0.59343,
+    "published": "2026-11-15",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-863"
+    ],
+    "desc": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
+    "epss": 0.00862,
+    "id": "CVE-2026-120002",
+    "in_kev": false,
+    "pct": 0.59108,
+    "published": "2026-11-10",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-306",
+     "CWE-434"
+    ],
+    "desc": "VITEC EZ TV Platform Server before 8.5.0 contains an unrestricted file upload vulnerability in the upload handler that allows unauthenticated remote attackers to upload arbitrary files by supplying a target filename in the X-FILENAME request header with no authentication or file type validation required. Attackers can upload a malicious ASPX file directly to the web-accessible uploads directory, where it is immediately executable by the web server, achieving remote code execution in the context of the web server process. Patches are available for versions 8.3.0, 8.3.1, 8.4.0, and 8.4.1. Users running releases prior to 8.3.0 should upgrade to 8.5.0+.",
+    "epss": 0.00808,
+    "id": "CVE-2026-82504",
+    "in_kev": false,
+    "pct": 0.57429,
+    "published": "2026-11-13",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-306"
+    ],
+    "desc": "sysPass 3.0.1 through 3.2.11 contains an authentication bypass vulnerability that allows unauthenticated attackers to reinstall an already-installed instance by POSTing to the install/install handler, which never checks isInstalled(). Attackers can overwrite config.xml, point the application at an attacker-controlled database, create an administrator account, and plant serialized PublicLink gadget chains triggered via account/viewLink to execute commands.",
+    "epss": 0.00795,
+    "id": "CVE-2026-129110",
+    "in_kev": false,
+    "pct": 0.56997,
+    "published": "2026-11-13",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "The Cloud Storage Manager for Fluent Forms – Google Drive, Dropbox, OneDrive, S3 Uploads plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 1.2.0. This is due to missing authorization checks on the `connection/{driver}/save` and `/download/single-file` REST endpoints, combined with insufficient path validation in the Google Drive `downloadFile()` function, where the Google Drive metadata `name` value is concatenated into a local path without `basename()`, `sanitize_file_name()`, or canonical path validation. This makes it possible for unauthenticated attackers to store attacker-controlled Google Drive credentials, trigger a download of an attacker-owned file whose provider-returned filename contains path traversal, and write attacker-controlled content outside the intended `downloads` directory. When the written file has a PHP extension and lands in a web-accessible location, this can lead to remote code execution.",
+    "epss": 0.00788,
+    "id": "CVE-2026-120522",
+    "in_kev": false,
+    "pct": 0.56774,
+    "published": "2026-11-14",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Performing a manipulation of the argument boundary results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\"",
+    "epss": 0.0078,
+    "id": "CVE-2026-129352",
+    "in_kev": false,
+    "pct": 0.56484,
+    "published": "2026-11-14",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "FrankenPHP Docker images before 1.1.11 were rebuilt only when new base image tags were created, so security fixes that Alpine, PHP, and Go applied under existing tags were not propagated. Remote attackers could exploit known flaws in the stale system libraries, such as CVE-2025-15467 in libcrypto3, to execute code.",
+    "epss": 0.00775,
+    "id": "CVE-2026-128027",
+    "in_kev": false,
+    "pct": 0.56342,
+    "published": "2026-11-13",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-120"
+    ],
+    "desc": "A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.00751,
+    "id": "CVE-2026-129250",
+    "in_kev": false,
+    "pct": 0.55552,
+    "published": "2026-11-14",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-416"
+    ],
+    "desc": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server terminating unexpectedly or, under certain conditions, arbitrary code execution in the context of the server process. Replica set members are affected, including the shard and config server replica set members of sharded clusters; standalone mongod instances are not.",
+    "epss": 0.00737,
+    "id": "CVE-2026-118383",
+    "in_kev": false,
+    "pct": 0.55091,
+    "published": "2026-11-10",
+    "score": 10.0,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "RBH Access Technologies Integra32 Security Management System 5.1.11 R5.0 contains an unauthenticated deserialization vulnerability in its deprecated .NET Remoting service, exposed on TCP port 2001 via the AxcvcLt.dll library using BinaryServerFormatterSinkProvider at TypeFilterLevel.Full without requiring authentication. A remote unauthenticated attacker can send a malicious serialized gadget payload (such as a ysoserial.net TypeConfuseDelegate chain) to the IntegraURI object endpoint, or exploit MarshalByRefObject/MarshalByValue unmarshalling for arbitrary file read/write and SMB/NTLMv2 credential coercion, to achieve remote code execution as NT AUTHORITY\\SYSTEM and fully compromise the host.",
+    "epss": 0.00685,
+    "id": "CVE-2026-63079",
+    "in_kev": false,
+    "pct": 0.53177,
+    "published": "2026-11-13",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Improper control of generation of code ('code injection') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
+    "epss": 0.0064,
+    "id": "CVE-2026-120779",
+    "in_kev": false,
+    "pct": 0.51243,
+    "published": "2026-11-10",
+    "score": 9.6,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-434"
+    ],
+    "desc": "Vvveb through 1.0.8.6 contains a file upload vulnerability in the theme installer validFile() function that uses strpos() instead of strict path matching. Attackers with admin credentials can upload a ZIP containing a PHP file whose path includes /theme.php to achieve remote code execution on nginx deployments.",
+    "epss": 0.00635,
+    "id": "CVE-2026-126378",
+    "in_kev": false,
+    "pct": 0.50998,
+    "published": "2026-11-13",
+    "score": 9.4,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 33
+ },
+ "schema": 1,
+ "window_days": 7
+}
