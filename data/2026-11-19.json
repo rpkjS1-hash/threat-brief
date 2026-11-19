@@ -1,0 +1,300 @@
+{
+ "edition": "2026-11-19",
+ "epss_date": "2026-11-18",
+ "generated_utc": "2026-11-19T03:47:52Z",
+ "kev": {
+  "catalogVersion": "2026.11.18",
+  "count": 1786,
+  "dateReleased": "2026-11-18T19:17:41.0354Z",
+  "due_soon": 4,
+  "items": [
+   {
+    "cveID": "CVE-2026-90817",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.03749,
+    "pct": 0.90092,
+    "product": "Research Electronic Data Capture (REDCap)",
+    "ransomware": "Unknown",
+    "shortDescription": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+    "vendorProject": "Vanderbilt University",
+    "vulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90436",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.01128,
+    "pct": 0.67007,
+    "product": "Axis",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Axis Unsafe Reflection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-40217",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-12-02",
+    "epss": 0.1702,
+    "pct": 0.97134,
+    "product": "LiteLLM",
+    "ransomware": "Unknown",
+    "shortDescription": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+    "vendorProject": "BerriAI",
+    "vulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-10441",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.01251,
+    "pct": 0.70014,
+    "product": "DiskStation Manager (DSM)",
+    "ransomware": "Unknown",
+    "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+    "vendorProject": "Synology",
+    "vulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-115731",
+    "dateAdded": "2026-11-17",
+    "dueDate": "2026-12-01",
+    "epss": 0.00691,
+    "pct": 0.53546,
+    "product": "Puppet Enterprise",
+    "ransomware": "Unknown",
+    "shortDescription": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+    "vendorProject": "Perforce",
+    "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123039",
+    "dateAdded": "2026-11-13",
+    "dueDate": "2026-11-16",
+    "epss": 0.01938,
+    "pct": 0.8054,
+    "product": "Multiple Products",
+    "ransomware": "Unknown",
+    "shortDescription": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+    "vendorProject": "Check Point",
+    "vulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-114713",
+    "dateAdded": "2026-11-13",
+    "dueDate": "2026-11-16",
+    "epss": 0.00467,
+    "pct": 0.41114,
+    "product": "UnrealIRCd",
+    "ransomware": "Unknown",
+    "shortDescription": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+    "vendorProject": "UnrealIRCd",
+    "vulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-122"
+    ],
+    "desc": "BZFlag bzfs before 2.4.32 contains a heap out-of-bounds write vulnerability in NetHandler::tcpReceive() that allows remote unauthenticated attackers to corrupt heap memory by sending a TCP message with a body length of exactly 1024. Attackers can overwrite the tcplen receive offset with a negative value to write controlled bytes before the buffer, crashing the server or executing commands as the bzfs user.",
+    "epss": 0.00845,
+    "id": "CVE-2026-130849",
+    "in_kev": false,
+    "pct": 0.58708,
+    "published": "2026-11-17",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Document Management and Collaboration product of Oracle E-Business Suite (component: Attachments).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Document Management and Collaboration.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Document Management and Collaboration accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Document Management and Collaboration. CVSS 3.1 Base Score 9.1 (Confidentiality and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H).",
+    "epss": 0.00508,
+    "id": "CVE-2026-114881",
+    "in_kev": false,
+    "pct": 0.44084,
+    "published": "2026-11-17",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Access Manager accessible data as well as  unauthorized access to critical data or complete access to all Oracle Access Manager accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Access Manager. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L).",
+    "epss": 0.00456,
+    "id": "CVE-2026-91510",
+    "in_kev": false,
+    "pct": 0.40246,
+    "published": "2026-11-17",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle WebLogic Server accessible data as well as  unauthorized read access to a subset of Oracle WebLogic Server accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle WebLogic Server. CVSS 3.1 Base Score 9.4 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H).",
+    "epss": 0.00438,
+    "id": "CVE-2026-91469",
+    "in_kev": false,
+    "pct": 0.38735,
+    "published": "2026-11-17",
+    "score": 9.4,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Hyperion Planning product of Oracle Hyperion (component: Security).   The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Hyperion Planning.  Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Hyperion Planning, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Hyperion Planning accessible data as well as  unauthorized access to critical data or complete access to all Oracle Hyperion Planning accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N).",
+    "epss": 0.00384,
+    "id": "CVE-2026-114956",
+    "in_kev": false,
+    "pct": 0.33123,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration).   The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Hyperion Infrastructure Technology.  Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Hyperion Infrastructure Technology, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Hyperion Infrastructure Technology accessible data as well as  unauthorized access to critical data or complete access to all Oracle Hyperion Infrastructure Technology accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N).",
+    "epss": 0.00384,
+    "id": "CVE-2026-115139",
+    "in_kev": false,
+    "pct": 0.33123,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Mobile Field Service product of Oracle E-Business Suite (component: Admin UI).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Mobile Field Service.  While the vulnerability is in Oracle Mobile Field Service, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Mobile Field Service accessible data as well as  unauthorized update, insert or delete access to some of Oracle Mobile Field Service accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N).",
+    "epss": 0.00354,
+    "id": "CVE-2026-101691",
+    "in_kev": false,
+    "pct": 0.29641,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Integration Broker).  Supported versions that are affected are 8.61-8.63. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise PeopleSoft Enterprise PeopleTools.  While the vulnerability is in PeopleSoft Enterprise PeopleTools, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all PeopleSoft Enterprise PeopleTools accessible data as well as  unauthorized update, insert or delete access to some of PeopleSoft Enterprise PeopleTools accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N).",
+    "epss": 0.00354,
+    "id": "CVE-2026-114934",
+    "in_kev": false,
+    "pct": 0.29643,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager.  While the vulnerability is in Oracle Access Manager, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Access Manager accessible data as well as  unauthorized read access to a subset of Oracle Access Manager accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N).",
+    "epss": 0.00339,
+    "id": "CVE-2026-91507",
+    "in_kev": false,
+    "pct": 0.27785,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-918"
+    ],
+    "desc": "Rootways Authorize.net CIM Pro extension for Magento 2 before 4.1.5 contains an unauthenticated server-side request forgery vulnerability in the Apple Pay merchant validation controller. Attackers can supply file://, gopher://, or dict:// URLs in the validationUrl parameter to read app/etc/env.php credentials and encryption keys or reach internal services and cloud metadata endpoints.",
+    "epss": 0.00276,
+    "id": "CVE-2026-130583",
+    "in_kev": false,
+    "pct": 0.20236,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the server's or a cluster member's certificate to gain cluster-level access, bypass authorization, modify trust store entries, and influence scriptlet-based authorization decisions.",
+    "epss": null,
+    "id": "CVE-2026-130778",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-18",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-347"
+    ],
+    "desc": "Fleet from 4.71.0 before 4.88.2 contains an authentication bypass vulnerability in the SAML SSO callback that looks up sessions using unvalidated client-supplied identifiers. Users able to run live queries or enroll secret holders can plant attacker-controlled identity provider metadata in the session store, then present a self-signed SAML response to log in as a global admin.",
+    "epss": null,
+    "id": "CVE-2026-130759",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-59"
+    ],
+    "desc": "Incus before 7.6.0 fails to reject special files, hard links, or symlinks in backup or image metadata, allowing restricted project users to read or overwrite host files. Attackers can import crafted backups containing device nodes, a hard-linked backup.yaml, or symlinks to corrupt host storage, overwrite host files, or leak other projects' data.",
+    "epss": null,
+    "id": "CVE-2026-130771",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "Incus before 7.6.0 contains a path traversal vulnerability that allows malicious migration peers to write outside intended directories by supplying unvalidated dependent volume and snapshot names in the migration offer header. Attackers controlling a migration source can create root-owned volumes with attacker content at arbitrary host paths, compromising hosts using dir storage pools, bypassing restricted.storage-pools.access, or crashing the daemon.",
+    "epss": null,
+    "id": "CVE-2026-130780",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-863"
+    ],
+    "desc": "Incus before 7.6.0 contains an authorization bypass vulnerability that allows restricted clients to create and access default project resources by exploiting entitlement checks against the requested project. Attackers can create bridge networks with raw.dnsmasq directives to execute code as root on the host, or manipulate inherited resources via the ?project= parameter.",
+    "epss": null,
+    "id": "CVE-2026-130784",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 29
+ },
+ "schema": 1,
+ "window_days": 7
+}
