@@ -1,0 +1,277 @@
+{
+ "edition": "2026-11-20",
+ "epss_date": "2026-11-19",
+ "generated_utc": "2026-11-20T03:41:53Z",
+ "kev": {
+  "catalogVersion": "2026.11.18",
+  "count": 1786,
+  "dateReleased": "2026-11-18T19:17:41.0354Z",
+  "due_soon": 4,
+  "items": [
+   {
+    "cveID": "CVE-2026-90817",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.25187,
+    "pct": 0.97974,
+    "product": "Research Electronic Data Capture (REDCap)",
+    "ransomware": "Unknown",
+    "shortDescription": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+    "vendorProject": "Vanderbilt University",
+    "vulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90436",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.01773,
+    "pct": 0.7866,
+    "product": "Axis",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Axis Unsafe Reflection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-40217",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-12-02",
+    "epss": 0.61911,
+    "pct": 0.99193,
+    "product": "LiteLLM",
+    "ransomware": "Unknown",
+    "shortDescription": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+    "vendorProject": "BerriAI",
+    "vulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-10441",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.0215,
+    "pct": 0.82512,
+    "product": "DiskStation Manager (DSM)",
+    "ransomware": "Unknown",
+    "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+    "vendorProject": "Synology",
+    "vulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-115731",
+    "dateAdded": "2026-11-17",
+    "dueDate": "2026-12-01",
+    "epss": 0.00691,
+    "pct": 0.53604,
+    "product": "Puppet Enterprise",
+    "ransomware": "Unknown",
+    "shortDescription": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+    "vendorProject": "Perforce",
+    "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-434"
+    ],
+    "desc": "The WP Duplicate – WordPress Migration Plugin plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.1.11 via the save_single_batch_file function. This is due to a PHP type-juggling authentication bypass via loose != comparison with no is_string() guard, combined with unsanitized base64-decoded path construction in save_single_batch_file() lacking any directory traversal containment. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server. Exploitation requires that the site owner has completed the plugin's initial setup so that the site_type and prod_key_random_id options are non-empty, though any non-empty secret value is bypassable via the type-juggling flaw.",
+    "epss": 0.02356,
+    "id": "CVE-2026-14492",
+    "in_kev": false,
+    "pct": 0.84104,
+    "published": "2026-11-19",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-697"
+    ],
+    "desc": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reach the method through Craft Commerce's payments/pay redirect template calling customer.photo.getUrl() with a crafted transform to instantiate classes like yii\\rbac\\PhpManager and execute PHP.",
+    "epss": 0.00545,
+    "id": "CVE-2026-130675",
+    "in_kev": false,
+    "pct": 0.46496,
+    "published": "2026-11-18",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-95"
+    ],
+    "desc": "ThinkPHP 2.0 through 2.2 and 3.0 Lite mode contains an eval injection vulnerability in the Dispatcher PATH_INFO parsing, which uses preg_replace with the /e modifier and a double-quoted replacement. Unauthenticated attackers can send crafted requests to index.php with a malicious 's' parameter containing PHP expressions to execute arbitrary code on the server. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
+    "epss": 0.00526,
+    "id": "CVE-2012-20007",
+    "in_kev": false,
+    "pct": 0.45321,
+    "published": "2026-11-18",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-74"
+    ],
+    "desc": "Incus before 7.6.0 contains a configuration injection vulnerability that allows users who can launch instances from controlled images to inject LXC directives by embedding line breaks in OCI config.json values or oci.entrypoint and oci.cwd keys. Attackers can add liblxc hooks or crafted tmpfs lxc.mount.entry fields to run commands as root on the host or bind-mount host paths, even from restricted projects.",
+    "epss": 0.00518,
+    "id": "CVE-2026-130786",
+    "in_kev": false,
+    "pct": 0.44802,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "epss": 0.00493,
+    "id": "CVE-2026-132142",
+    "in_kev": false,
+    "pct": 0.43102,
+    "published": "2026-11-18",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "All versions of LaraDashboard contain an authentication bypass in SocialAuthService::findOrCreateUser(), which links a social login to an existing account by email without checking that the OAuth provider verified that email. Unauthenticated attackers using an OAuth/OIDC provider that asserts a victim's email can log in as any user, including Superadmin, and keep persistent access through a linked social_accounts entry.",
+    "epss": 0.00442,
+    "id": "CVE-2026-130754",
+    "in_kev": false,
+    "pct": 0.3916,
+    "published": "2026-11-18",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-79"
+    ],
+    "desc": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel.",
+    "epss": 0.00364,
+    "id": "CVE-2026-130679",
+    "in_kev": false,
+    "pct": 0.30925,
+    "published": "2026-11-18",
+    "score": 9.4,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration).   The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Hyperion Infrastructure Technology.  Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Hyperion Infrastructure Technology, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Hyperion Infrastructure Technology accessible data as well as  unauthorized access to critical data or complete access to all Oracle Hyperion Infrastructure Technology accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N).",
+    "epss": 0.00352,
+    "id": "CVE-2026-115139",
+    "in_kev": false,
+    "pct": 0.29493,
+    "published": "2026-11-17",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-140"
+    ],
+    "desc": "Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction. Attackers can rename a folder like locked*** or save from a page with an unusual prefix width through a front-end Flex pages form, replacing protected content and permissions to access the protected subtree.",
+    "epss": 0.00308,
+    "id": "CVE-2026-130733",
+    "in_kev": false,
+    "pct": 0.24096,
+    "published": "2026-11-18",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the server's or a cluster member's certificate to gain cluster-level access, bypass authorization, modify trust store entries, and influence scriptlet-based authorization decisions.",
+    "epss": 0.0027,
+    "id": "CVE-2026-130778",
+    "in_kev": false,
+    "pct": 0.19523,
+    "published": "2026-11-18",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "IBM Guardium Data Protection 12.2 is vulnerable to insecure deserialization in the SharePoint Tap MulticastTransceiver component. An unauthenticated remote attacker could exploit this vulnerability to execute arbitrary code on the affected system.",
+    "epss": null,
+    "id": "CVE-2026-84236",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-19",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could use an empty clustering shared secret to read and modify clustering configuration through the cluster configuration Representational State Transfer (REST) API endpoint on a standalone instance. This could expose clustering configuration, persist attacker-controlled clustering settings, and disrupt clustering operations.\nThe vulnerability is possible because Splunk Enterprise accepts the empty clustering shared secret as a shared-authentication candidate on a standalone instance when clustering is turned off.",
+    "epss": null,
+    "id": "CVE-2026-76536",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-19",
+    "score": 9.4,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "In Splunk Enterprise versions below 10.6.1, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could run arbitrary Search Processing Language (SPL) searches through RapidDiag task collection as an authenticated user. With this access, the user could read or modify data and configuration available to that authenticated user.\nThe vulnerability is possible because Splunk Enterprise accepts an empty shared secret when it authenticates RapidDiag task-collection requests.\nFor more information see Using RapidDiag (https://help.splunk.com/en/splunk-enterprise/administer/troubleshoot/9.3/contact-splunk-support/using-rapiddiag) in the Splunk documentation.",
+    "epss": null,
+    "id": "CVE-2026-76535",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-19",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-306"
+    ],
+    "desc": "IBM Guardium Data Protection 12.2 is vulnerable to missing authentication in the SharePoint S-TAP RelayService, allowing an unauthenticated network attacker to inject forged audit events and access the active monitoring policy.",
+    "epss": null,
+    "id": "CVE-2026-82339",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-19",
+    "score": 9.1,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 14
+ },
+ "schema": 1,
+ "window_days": 7
+}
