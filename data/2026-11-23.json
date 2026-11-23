@@ -1,0 +1,260 @@
+{
+ "edition": "2026-11-23",
+ "epss_date": "2026-11-22",
+ "generated_utc": "2026-11-23T03:02:11Z",
+ "kev": {
+  "catalogVersion": "2026.11.20",
+  "count": 1790,
+  "dateReleased": "2026-11-20T17:48:39.1516Z",
+  "due_soon": 8,
+  "items": [
+   {
+    "cveID": "CVE-2026-129448",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.05459,
+    "pct": 0.92939,
+    "product": "Roller",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123890",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.03526,
+    "pct": 0.8953,
+    "product": "VMware vCenter",
+    "ransomware": "Unknown",
+    "shortDescription": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+    "vendorProject": "Broadcom",
+    "vulnerabilityName": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-76466",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.02187,
+    "pct": 0.82875,
+    "product": "Expressway Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability"
+   },
+   {
+    "cveID": "CVE-2025-42884",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.00714,
+    "pct": 0.54603,
+    "product": "NetWeaver",
+    "ransomware": "Unknown",
+    "shortDescription": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+    "vendorProject": "SAP",
+    "vulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90817",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.34335,
+    "pct": 0.98448,
+    "product": "Research Electronic Data Capture (REDCap)",
+    "ransomware": "Unknown",
+    "shortDescription": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+    "vendorProject": "Vanderbilt University",
+    "vulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90436",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.03813,
+    "pct": 0.90314,
+    "product": "Axis",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Axis Unsafe Reflection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-40217",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-12-02",
+    "epss": 0.78004,
+    "pct": 0.99581,
+    "product": "LiteLLM",
+    "ransomware": "Unknown",
+    "shortDescription": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+    "vendorProject": "BerriAI",
+    "vulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-10441",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.03129,
+    "pct": 0.88188,
+    "product": "DiskStation Manager (DSM)",
+    "ransomware": "Unknown",
+    "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+    "vendorProject": "Synology",
+    "vulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-115731",
+    "dateAdded": "2026-11-17",
+    "dueDate": "2026-12-01",
+    "epss": 0.01231,
+    "pct": 0.69697,
+    "product": "Puppet Enterprise",
+    "ransomware": "Unknown",
+    "shortDescription": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+    "vendorProject": "Perforce",
+    "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was identified in Gladys Assistant up to 4.71.0. This affects an unknown function of the file gateway.downloadBackup.js of the component Backup Restore Endpoint. The manipulation of the argument file_url leads to os command injection. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 4.72.0 mitigates this issue. Upgrading the affected component is recommended.",
+    "epss": 0.03022,
+    "id": "CVE-2026-133500",
+    "in_kev": false,
+    "pct": 0.87792,
+    "published": "2026-11-20",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+    "epss": 0.02215,
+    "id": "CVE-2026-133680",
+    "in_kev": false,
+    "pct": 0.83085,
+    "published": "2026-11-20",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-95"
+    ],
+    "desc": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a double-quoted string and evaluating it with eval(). Because PHP interpolates double-quoted strings, a payload of the form {${...}} in the URL path is executed during interpolation, so no quote breakout is required and WordPress' slashing does not mitigate it. This makes it possible for unauthenticated attackers to execute arbitrary code on the server with a single GET request. The affected conditions ship enabled by default and are evaluated before any logged-in check, so no plugin configuration is needed; the site must have BuddyPress and Paid Memberships Pro active alongside this plugin.",
+    "epss": 0.02157,
+    "id": "CVE-2026-120539",
+    "in_kev": false,
+    "pct": 0.82645,
+    "published": "2026-11-21",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.01052,
+    "id": "CVE-2026-133993",
+    "in_kev": false,
+    "pct": 0.65184,
+    "published": "2026-11-21",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-269"
+    ],
+    "desc": "The Nexter Blocks Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.0.10 via the `tpgb_ajax_register_user()` function. This is due to a byte-level denylist on the `tpgb_acf_key[]` and `tpgb_acf[]` parameters that fails to block Unicode look-alike characters — such as U+1E87 and U+00E7 in a key like `ẇp_çapabilities` — whose UTF-8 byte sequences do not match any ASCII-based pattern check, while the database's default accent-insensitive collation (`utf8mb4_unicode_ci` / `utf8mb4_0900_ai_ci`) treats the decorated key as equivalent to the canonical `wp_capabilities` row, causing `update_user_meta()` to overwrite the newly registered user's role with `administrator`. This makes it possible for unauthenticated attackers to register a new account bearing the full Administrator role, gaining complete control over the WordPress site including the ability to install plugins, modify files, and execute arbitrary code. The nonce required by the handler is publicly emitted on any page containing the tp-login-register block, making the full exploit chain — nonce retrieval, a single crafted registration POST, and the plugin's own `autologin` flow — trivially reachable on any default install where user registration is enabled. Successful exploitation causes the attacker's own account to receive the complete Administrator role.",
+    "epss": 0.00801,
+    "id": "CVE-2026-125294",
+    "in_kev": false,
+    "pct": 0.57566,
+    "published": "2026-11-21",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-862"
+    ],
+    "desc": "SurrealDB 1.0.0 before 4.0.0 contains a capability check bypass in its embedded JavaScript scripting engine, where the surrealdb.functions bridge calls the internal fnc::synchronous() and fnc::asynchronous() dispatchers without enforcing function capability checks. Authenticated users denied access to built-in functions in SurrealQL can execute them by calling them through surrealdb.functions from embedded JavaScript.",
+    "epss": 0.00703,
+    "id": "CVE-2026-134292",
+    "in_kev": false,
+    "pct": 0.54194,
+    "published": "2026-11-21",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-74"
+    ],
+    "desc": "Incus before 7.6.0 contains a configuration injection vulnerability that allows users who can launch instances from controlled images to inject LXC directives by embedding line breaks in OCI config.json values or oci.entrypoint and oci.cwd keys. Attackers can add liblxc hooks or crafted tmpfs lxc.mount.entry fields to run commands as root on the host or bind-mount host paths, even from restricted projects.",
+    "epss": 0.00518,
+    "id": "CVE-2026-130786",
+    "in_kev": false,
+    "pct": 0.44909,
+    "published": "2026-11-18",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "epss": 0.00493,
+    "id": "CVE-2026-132142",
+    "in_kev": false,
+    "pct": 0.43193,
+    "published": "2026-11-18",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the server's or a cluster member's certificate to gain cluster-level access, bypass authorization, modify trust store entries, and influence scriptlet-based authorization decisions.",
+    "epss": 0.0027,
+    "id": "CVE-2026-130778",
+    "in_kev": false,
+    "pct": 0.19445,
+    "published": "2026-11-18",
+    "score": 10.0,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 9
+ },
+ "schema": 1,
+ "window_days": 7
+}
