@@ -1,0 +1,354 @@
+{
+ "edition": "2026-11-24",
+ "epss_date": "2026-11-23",
+ "generated_utc": "2026-11-24T06:19:20Z",
+ "kev": {
+  "catalogVersion": "2026.11.23",
+  "count": 1792,
+  "dateReleased": "2026-11-23T19:43:55.7979Z",
+  "due_soon": 6,
+  "items": [
+   {
+    "cveID": "CVE-2026-134624",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.00354,
+    "pct": 0.2969,
+    "product": "MailAssure",
+    "ransomware": "Unknown",
+    "shortDescription": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+    "vendorProject": "N-able",
+    "vulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133968",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.03664,
+    "pct": 0.89921,
+    "product": "MONAI Label",
+    "ransomware": "Unknown",
+    "shortDescription": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+    "vendorProject": "Project MONAI",
+    "vulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-129448",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.05459,
+    "pct": 0.9294,
+    "product": "Roller",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123890",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.03526,
+    "pct": 0.89533,
+    "product": "VMware vCenter",
+    "ransomware": "Unknown",
+    "shortDescription": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+    "vendorProject": "Broadcom",
+    "vulnerabilityName": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-76466",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.02187,
+    "pct": 0.82879,
+    "product": "Expressway Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability"
+   },
+   {
+    "cveID": "CVE-2025-42884",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.00902,
+    "pct": 0.60644,
+    "product": "NetWeaver",
+    "ransomware": "Unknown",
+    "shortDescription": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+    "vendorProject": "SAP",
+    "vulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90817",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.34335,
+    "pct": 0.98448,
+    "product": "Research Electronic Data Capture (REDCap)",
+    "ransomware": "Unknown",
+    "shortDescription": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+    "vendorProject": "Vanderbilt University",
+    "vulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-90436",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.05874,
+    "pct": 0.93395,
+    "product": "Axis",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Axis Unsafe Reflection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-40217",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-12-02",
+    "epss": 0.82799,
+    "pct": 0.99678,
+    "product": "LiteLLM",
+    "ransomware": "Unknown",
+    "shortDescription": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+    "vendorProject": "BerriAI",
+    "vulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2024-10441",
+    "dateAdded": "2026-11-18",
+    "dueDate": "2026-11-21",
+    "epss": 0.03129,
+    "pct": 0.88191,
+    "product": "DiskStation Manager (DSM)",
+    "ransomware": "Known",
+    "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+    "vendorProject": "Synology",
+    "vulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was identified in Gladys Assistant up to 4.71.0. This affects an unknown function of the file gateway.downloadBackup.js of the component Backup Restore Endpoint. The manipulation of the argument file_url leads to os command injection. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 4.72.0 mitigates this issue. Upgrading the affected component is recommended.",
+    "epss": 0.03022,
+    "id": "CVE-2026-133500",
+    "in_kev": false,
+    "pct": 0.87795,
+    "published": "2026-11-20",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely.",
+    "epss": 0.02524,
+    "id": "CVE-2026-134882",
+    "in_kev": false,
+    "pct": 0.85271,
+    "published": "2026-11-23",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+    "epss": 0.02215,
+    "id": "CVE-2026-133680",
+    "in_kev": false,
+    "pct": 0.83089,
+    "published": "2026-11-20",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-88"
+    ],
+    "desc": "An improper neutralization of argument delimiters in a command vulnerability in the OAuth API in Synology DiskStation Manager (DSM) before 7.1.1-42962-10, 7.2.1-69057-14, 7.2.2-72806-11, 7.3.2-86009-6, and 7.4.1-90080-2 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.",
+    "epss": 0.01214,
+    "id": "CVE-2026-120382",
+    "in_kev": false,
+    "pct": 0.69299,
+    "published": "2026-11-23",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.01052,
+    "id": "CVE-2026-133993",
+    "in_kev": false,
+    "pct": 0.6519,
+    "published": "2026-11-21",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "Improper authentication in Azure Event Grid allows an unauthorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-62841",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-285"
+    ],
+    "desc": "Improper authorization in M365 Copilot allows an authorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-50691",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-22"
+    ],
+    "desc": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+    "epss": null,
+    "id": "CVE-2026-70193",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-506"
+    ],
+    "desc": "Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, WP Sync for Notion – Notion to WordPress, Add-On for Contact Form 7 to Airtable, Add-on Brevo for Gravity Forms, and Air WP Sync – Airtable to WordPress) contain embedded malicious code (a backdoor) in the versions listed. The affected releases unconditionally load a backdoor module (includes/airwp-online.php) that runs on every request via the 'init' hook and on a half-hourly WP-Cron event, sends site information (site URL, PHP, WordPress and OS versions, and the server user) to a remote command-and-control server at tascredit-pay.com with TLS certificate verification disabled, and executes the PHP code returned by that server via eval(). The module also accepts queued commands that run shell commands, read, write and delete arbitrary files, query arbitrary database tables, dump the users table including password hashes, drop a webshell into the uploads directory, and install persistent hourly code execution. This makes it possible for unauthenticated attackers in control of the remote server, or able to intercept its traffic, to execute arbitrary code on the server and fully compromise affected sites. All affected plugins have been closed on WordPress.org and no patched versions are available; we strongly recommend uninstalling them and running a complete malware scan.",
+    "epss": null,
+    "id": "CVE-2026-135202",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-1394"
+    ],
+    "desc": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256 tokens with arbitrary username and role claims to access /api and /config routes, exposing RTSP, ONVIF, Hub and encryption keys, rewriting configuration, and stopping the camera.",
+    "epss": null,
+    "id": "CVE-2026-135208",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [],
+    "desc": "Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-109480",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.6,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-918"
+    ],
+    "desc": "Server-side request forgery in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-118285",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.6,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-79"
+    ],
+    "desc": "Improper neutralization of input during web page generation ('cross-site scripting') in Azure Portal allows an unauthorized attacker to perform spoofing over a network.",
+    "epss": null,
+    "id": "CVE-2026-70305",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.6,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-79"
+    ],
+    "desc": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-109490",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.3,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-639"
+    ],
+    "desc": "Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.",
+    "epss": null,
+    "id": "CVE-2026-113824",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-23",
+    "score": 9.1,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 17
+ },
+ "schema": 1,
+ "window_days": 7
+}
