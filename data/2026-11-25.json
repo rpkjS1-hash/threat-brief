@@ -1,0 +1,347 @@
+{
+ "edition": "2026-11-25",
+ "epss_date": "2026-11-24",
+ "generated_utc": "2026-11-25T04:59:57Z",
+ "kev": {
+  "catalogVersion": "2026.11.24",
+  "count": 1795,
+  "dateReleased": "2026-11-24T17:47:46.199Z",
+  "due_soon": 5,
+  "items": [
+   {
+    "cveID": "CVE-2026-132224",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": 0.00411,
+    "pct": 0.35845,
+    "product": "Web Experimentation",
+    "ransomware": "Unknown",
+    "shortDescription": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+    "vendorProject": "Optimizely",
+    "vulnerabilityName": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-132165",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": null,
+    "pct": null,
+    "product": "Core",
+    "ransomware": "Unknown",
+    "shortDescription": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+    "vendorProject": "Drupal",
+    "vulnerabilityName": "Drupal Core Remote Code Execution Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-131914",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": 0.00614,
+    "pct": 0.50152,
+    "product": "AntiCsrf",
+    "ransomware": "Unknown",
+    "shortDescription": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Idunno",
+    "vulnerabilityName": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-134624",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.00617,
+    "pct": 0.50289,
+    "product": "MailAssure",
+    "ransomware": "Unknown",
+    "shortDescription": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+    "vendorProject": "N-able",
+    "vulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133968",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.49795,
+    "pct": 0.98916,
+    "product": "MONAI Label",
+    "ransomware": "Unknown",
+    "shortDescription": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+    "vendorProject": "Project MONAI",
+    "vulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-129448",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.40069,
+    "pct": 0.98654,
+    "product": "Roller",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123890",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.03526,
+    "pct": 0.89444,
+    "product": "VMware vCenter",
+    "ransomware": "Unknown",
+    "shortDescription": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+    "vendorProject": "Broadcom",
+    "vulnerabilityName": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-76466",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.02187,
+    "pct": 0.82762,
+    "product": "Expressway Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability"
+   },
+   {
+    "cveID": "CVE-2025-42884",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.00902,
+    "pct": 0.60474,
+    "product": "NetWeaver",
+    "ransomware": "Unknown",
+    "shortDescription": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+    "vendorProject": "SAP",
+    "vulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-502"
+    ],
+    "desc": "Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection",
+    "epss": 0.00614,
+    "id": "CVE-2026-131914",
+    "in_kev": true,
+    "pct": 0.50152,
+    "published": "2026-11-19",
+    "score": 9.8,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely.",
+    "epss": 0.02524,
+    "id": "CVE-2026-134882",
+    "in_kev": false,
+    "pct": 0.85166,
+    "published": "2026-11-23",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+    "epss": 0.02215,
+    "id": "CVE-2026-133680",
+    "in_kev": false,
+    "pct": 0.82973,
+    "published": "2026-11-20",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-119",
+     "CWE-121"
+    ],
+    "desc": "A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.01052,
+    "id": "CVE-2026-133993",
+    "in_kev": false,
+    "pct": 0.65022,
+    "published": "2026-11-21",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-787"
+    ],
+    "desc": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.",
+    "epss": 0.00681,
+    "id": "CVE-2026-135736",
+    "in_kev": false,
+    "pct": 0.53179,
+    "published": "2026-11-24",
+    "score": 9.8,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-1394"
+    ],
+    "desc": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256 tokens with arbitrary username and role claims to access /api and /config routes, exposing RTSP, ONVIF, Hub and encryption keys, rewriting configuration, and stopping the camera.",
+    "epss": 0.00558,
+    "id": "CVE-2026-135208",
+    "in_kev": false,
+    "pct": 0.47122,
+    "published": "2026-11-23",
+    "score": 9.8,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-287"
+    ],
+    "desc": "A vulnerability was identified in Netis WF2409E up to 20261026. Affected by this issue is some unknown functionality of the file /cgi-bin/skk_set.cgi of the component CGI Interface. The manipulation of the argument app/password/new_pwd_confirm/passwd_set/mode_name/wl_link leads to improper authentication. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": null,
+    "id": "CVE-2026-136136",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-25",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability has been found in Panabit Smart Application Gateway TANGr7p10. This issue affects the function send_email_authcode of the file user.cgi of the component Email Auth Code Sender. Such manipulation of the argument Username leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": null,
+    "id": "CVE-2026-135792",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was identified in Volans NGFW Next-Generation Firewall r5.1. Impacted is the function exec of the file sslvpn/sslvpn_client.php of the component SSLVPN Client. Such manipulation of the argument img leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": null,
+    "id": "CVE-2026-135797",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in D-Link DIR-X1860 4.5.2. Affected by this vulnerability is an unknown functionality of the file /usr/sbin/anweb. Executing a manipulation can lead to os command injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+    "epss": null,
+    "id": "CVE-2026-135788",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in Panabit Smart Application Gateway TANGr7p10. This affects an unknown part of the file /cgi-bin/dashboard/ajax_chart_dump. The manipulation of the argument isntmeye results in os command injection. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": null,
+    "id": "CVE-2026-135790",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "epss": null,
+    "id": "CVE-2026-123342",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "epss": null,
+    "id": "CVE-2026-123723",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "epss": null,
+    "id": "CVE-2026-123986",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-94"
+    ],
+    "desc": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "epss": null,
+    "id": "CVE-2026-123987",
+    "in_kev": false,
+    "pct": null,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 32
+ },
+ "schema": 1,
+ "window_days": 7
+}
