@@ -1,0 +1,471 @@
+{
+ "edition": "2026-11-26",
+ "epss_date": "2026-11-25",
+ "generated_utc": "2026-11-26T04:19:13Z",
+ "kev": {
+  "catalogVersion": "2026.11.25",
+  "count": 1805,
+  "dateReleased": "2026-11-25T19:48:12.4344Z",
+  "due_soon": 13,
+  "items": [
+   {
+    "cveID": "CVE-2026-133469",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.01101,
+    "pct": 0.65258,
+    "product": "Xen Orchestra",
+    "ransomware": "Unknown",
+    "shortDescription": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object.",
+    "vendorProject": "Vates",
+    "vulnerabilityName": "Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133324",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.00414,
+    "pct": 0.273,
+    "product": "MiCollab",
+    "ransomware": "Unknown",
+    "shortDescription": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions.",
+    "vendorProject": "Mitel",
+    "vulnerabilityName": "Mitel MiCollab Not Failing Securely Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133323",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.02546,
+    "pct": 0.85725,
+    "product": "MiCollab",
+    "ransomware": "Unknown",
+    "shortDescription": "Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands.",
+    "vendorProject": "Mitel",
+    "vulnerabilityName": "Mitel MiCollab OS Command Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133311",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-12-09",
+    "epss": 0.00396,
+    "pct": 0.2537,
+    "product": "MiCollab",
+    "ransomware": "Unknown",
+    "shortDescription": "Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content.",
+    "vendorProject": "Mitel",
+    "vulnerabilityName": "Mitel MiCollab Weak Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133303",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.00515,
+    "pct": 0.37111,
+    "product": "MiCollab",
+    "ransomware": "Unknown",
+    "shortDescription": "Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content.",
+    "vendorProject": "Mitel",
+    "vulnerabilityName": "Mitel MiCollab XML Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133275",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.00315,
+    "pct": 0.1686,
+    "product": "MiCollab",
+    "ransomware": "Unknown",
+    "shortDescription": "Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files.",
+    "vendorProject": "Mitel",
+    "vulnerabilityName": "Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-103406",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.0086,
+    "pct": 0.56019,
+    "product": "Juniper Session Smart Conductor and Session Smart Router",
+    "ransomware": "Unknown",
+    "shortDescription": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+    "vendorProject": "Hewlett Packard Enterprise (HPE)",
+    "vulnerabilityName": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability"
+   },
+   {
+    "cveID": "CVE-2025-41450",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-12-09",
+    "epss": 0.00513,
+    "pct": 0.37031,
+    "product": "AK-SM 800A Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.",
+    "vendorProject": "Danfoss",
+    "vulnerabilityName": "Danfoss AK-SM 800A Series Improper Authentication Vulnerability"
+   },
+   {
+    "cveID": "CVE-2023-25915",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.01431,
+    "pct": 0.73235,
+    "product": "AK-SM 800A Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system.",
+    "vendorProject": "Danfoss",
+    "vulnerabilityName": "Danfoss AK-SM 800A Series Improper Input Validation Vulnerability"
+   },
+   {
+    "cveID": "CVE-2023-25914",
+    "dateAdded": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "epss": 0.01078,
+    "pct": 0.64585,
+    "product": "AK-SM 800A Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.",
+    "vendorProject": "Danfoss",
+    "vulnerabilityName": "Danfoss AK-SM 800A Series Path Traversal Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-132224",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": 0.00784,
+    "pct": 0.52543,
+    "product": "Web Experimentation",
+    "ransomware": "Unknown",
+    "shortDescription": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+    "vendorProject": "Optimizely",
+    "vulnerabilityName": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-132165",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": null,
+    "pct": null,
+    "product": "Core",
+    "ransomware": "Unknown",
+    "shortDescription": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+    "vendorProject": "Drupal",
+    "vulnerabilityName": "Drupal Core Remote Code Execution Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-131914",
+    "dateAdded": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "epss": 0.04292,
+    "pct": 0.9189,
+    "product": "AntiCsrf",
+    "ransomware": "Unknown",
+    "shortDescription": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+    "vendorProject": "Idunno",
+    "vulnerabilityName": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-134624",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.01793,
+    "pct": 0.78889,
+    "product": "MailAssure",
+    "ransomware": "Unknown",
+    "shortDescription": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+    "vendorProject": "N-able",
+    "vulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-133968",
+    "dateAdded": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "epss": 0.27157,
+    "pct": 0.98495,
+    "product": "MONAI Label",
+    "ransomware": "Unknown",
+    "shortDescription": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+    "vendorProject": "Project MONAI",
+    "vulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-129448",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.24159,
+    "pct": 0.98332,
+    "product": "Roller",
+    "ransomware": "Unknown",
+    "shortDescription": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+    "vendorProject": "Apache",
+    "vulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-123890",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.05009,
+    "pct": 0.93012,
+    "product": "VMware vCenter",
+    "ransomware": "Unknown",
+    "shortDescription": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+    "vendorProject": "Broadcom",
+    "vulnerabilityName": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+   },
+   {
+    "cveID": "CVE-2026-76466",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.01116,
+    "pct": 0.65685,
+    "product": "Expressway Series",
+    "ransomware": "Unknown",
+    "shortDescription": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+    "vendorProject": "Cisco",
+    "vulnerabilityName": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability"
+   },
+   {
+    "cveID": "CVE-2025-42884",
+    "dateAdded": "2026-11-20",
+    "dueDate": "2026-11-23",
+    "epss": 0.01102,
+    "pct": 0.65286,
+    "product": "NetWeaver",
+    "ransomware": "Unknown",
+    "shortDescription": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+    "vendorProject": "SAP",
+    "vulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability"
+   }
+  ],
+  "padded": false
+ },
+ "nvd": {
+  "error": null,
+  "shown": [
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct a blind command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This is MTLVULN-1864.",
+    "epss": 0.02546,
+    "id": "CVE-2026-133323",
+    "in_kev": true,
+    "pct": 0.85725,
+    "published": "2026-11-19",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-91"
+    ],
+    "desc": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to leverage pre-staged malicious content to conduct an XML injection attack due to insufficient parameter validation. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This is MTLVULN-1862.",
+    "epss": 0.00515,
+    "id": "CVE-2026-133303",
+    "in_kev": true,
+    "pct": 0.37111,
+    "published": "2026-11-19",
+    "score": 9.8,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A security vulnerability has been detected in D-Link R95 101B06. Affected by this issue is the function GetBluetoothAdapterSettings/GetBluetoothBloodPressure/GetBluetoothDeviceList/GetBluetoothScanDeviceList/SetBluetoothAdapterSettings/SetBluetoothUnpairDevice/SetTriggerBluetoothScan/SetBluetoothPairDevice of the file /bin/ssi of the component DHMAPI SOAP Handler. The manipulation of the argument inner_xml leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used.",
+    "epss": 0.03561,
+    "id": "CVE-2026-135789",
+    "in_kev": false,
+    "pct": 0.90097,
+    "published": "2026-11-24",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "4.0",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely.",
+    "epss": 0.032,
+    "id": "CVE-2026-134882",
+    "in_kev": false,
+    "pct": 0.88874,
+    "published": "2026-11-23",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-74",
+     "CWE-77"
+    ],
+    "desc": "A weakness has been identified in Tenda RX3 16.03.13.11_multi. This affects the function fromAdvSetMacMtuWan of the file /goform/AdvSetMacMtuWan. This manipulation of the argument mac causes command injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+    "epss": 0.03022,
+    "id": "CVE-2026-136550",
+    "in_kev": false,
+    "pct": 0.8818,
+    "published": "2026-11-25",
+    "score": 9.1,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-78"
+    ],
+    "desc": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network.",
+    "epss": 0.02651,
+    "id": "CVE-2026-65817",
+    "in_kev": false,
+    "pct": 0.86357,
+    "published": "2026-11-23",
+    "score": 9.6,
+    "scored_by": "NVD"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used.",
+    "epss": 0.02622,
+    "id": "CVE-2026-133680",
+    "in_kev": false,
+    "pct": 0.86192,
+    "published": "2026-11-20",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was determined in Volans NGFW Next-Generation Firewall r5.1. This issue affects the function exec/system of the file modules/assets/port_serve_scan.mds of the component Web Management UI. This manipulation of the argument task_name/where/path causes os command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02545,
+    "id": "CVE-2026-135796",
+    "in_kev": false,
+    "pct": 0.85721,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability has been found in Panabit Smart Application Gateway TANGr7p10. This issue affects the function send_email_authcode of the file user.cgi of the component Email Auth Code Sender. Such manipulation of the argument Username leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02337,
+    "id": "CVE-2026-135792",
+    "in_kev": false,
+    "pct": 0.84301,
+    "published": "2026-11-24",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was identified in Volans NGFW Next-Generation Firewall r5.1. Impacted is the function exec of the file sslvpn/sslvpn_client.php of the component SSLVPN Client. Such manipulation of the argument img leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.02337,
+    "id": "CVE-2026-135797",
+    "in_kev": false,
+    "pct": 0.84302,
+    "published": "2026-11-24",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-74",
+     "CWE-77"
+    ],
+    "desc": "A security flaw has been discovered in Tenda RX3 16.03.13.11_multi. The impacted element is the function formSetSafeWanWebMan of the file /goform/SetRemoteWebCfg. The manipulation of the argument remoteIp results in command injection. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
+    "epss": 0.02206,
+    "id": "CVE-2026-136549",
+    "in_kev": false,
+    "pct": 0.8326,
+    "published": "2026-11-25",
+    "score": 10.0,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A vulnerability was detected in Panabit Smart Application Gateway TANGr7p10. This affects an unknown part of the file /cgi-bin/dashboard/ajax_chart_dump. The manipulation of the argument isntmeye results in os command injection. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.01942,
+    "id": "CVE-2026-135790",
+    "in_kev": false,
+    "pct": 0.80759,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A flaw has been found in Panabit Smart Application Gateway TANGr7p10. This vulnerability affects the function edit_data_pie of the file /cgi-bin/flowcontrol/ajax_data_pie. This manipulation of the argument Name causes os command injection. The attack may be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "epss": 0.01942,
+    "id": "CVE-2026-135791",
+    "in_kev": false,
+    "pct": 0.80759,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-77",
+     "CWE-78"
+    ],
+    "desc": "A weakness has been identified in D-Link DIR-X1860 4.5.2. Affected by this vulnerability is an unknown functionality of the file /usr/sbin/anweb. Executing a manipulation can lead to os command injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+    "epss": 0.01836,
+    "id": "CVE-2026-135788",
+    "in_kev": false,
+    "pct": 0.7945,
+    "published": "2026-11-24",
+    "score": 9.9,
+    "scored_by": "CNA"
+   },
+   {
+    "cvss_version": "3.1",
+    "cwes": [
+     "CWE-36"
+    ],
+    "desc": "BusyBox through 1.38.0 contains an absolute path traversal vulnerability in tftpd that allows unauthenticated remote attackers to access files outside any intended directory when started without a DIR argument. Attackers can send RRQ or WRQ packets with file names beginning with '/' to read sensitive files like /etc/shadow or overwrite files, typically as root.",
+    "epss": 0.01507,
+    "id": "CVE-2026-136411",
+    "in_kev": false,
+    "pct": 0.74627,
+    "published": "2026-11-24",
+    "score": 9.8,
+    "scored_by": "CNA"
+   }
+  ],
+  "total": 35
+ },
+ "schema": 1,
+ "window_days": 7
+}
